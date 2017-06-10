@@ -1,0 +1,215 @@
+[09-Jun-2017 07:39:53 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:39:53 UTC] PHP Stack trace:
+[09-Jun-2017 07:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:40:17 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:40:17 UTC] PHP Stack trace:
+[09-Jun-2017 07:40:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:40:17 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:40:17 UTC] PHP Stack trace:
+[09-Jun-2017 07:40:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:41:15 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:41:15 UTC] PHP Stack trace:
+[09-Jun-2017 07:41:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:41:54 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:41:54 UTC] PHP Stack trace:
+[09-Jun-2017 07:41:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:46:09 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:46:09 UTC] PHP Stack trace:
+[09-Jun-2017 07:46:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:46:23 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:46:23 UTC] PHP Stack trace:
+[09-Jun-2017 07:46:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:48:15 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:48:15 UTC] PHP Stack trace:
+[09-Jun-2017 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:48:18 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:48:18 UTC] PHP Stack trace:
+[09-Jun-2017 07:48:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:51:09 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:51:09 UTC] PHP Stack trace:
+[09-Jun-2017 07:51:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:53:52 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:53:52 UTC] PHP Stack trace:
+[09-Jun-2017 07:53:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:53:59 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:53:59 UTC] PHP Stack trace:
+[09-Jun-2017 07:53:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 07:54:03 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 20
+[09-Jun-2017 07:54:03 UTC] PHP Stack trace:
+[09-Jun-2017 07:54:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:09:24 UTC] PHP Parse error:  syntax error, unexpected '$state' (T_VARIABLE) in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 75
+[09-Jun-2017 08:09:24 UTC] PHP Stack trace:
+[09-Jun-2017 08:09:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:09:27 UTC] PHP Parse error:  syntax error, unexpected '$state' (T_VARIABLE) in /home/ubuntu/workspace/tfg/lib/controller/OrderController.php on line 75
+[09-Jun-2017 08:09:27 UTC] PHP Stack trace:
+[09-Jun-2017 08:09:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:10:56 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:10:56 UTC] PHP Stack trace:
+[09-Jun-2017 08:10:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:11:05 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:11:05 UTC] PHP Stack trace:
+[09-Jun-2017 08:11:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:11:24 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:11:24 UTC] PHP Stack trace:
+[09-Jun-2017 08:11:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:11:25 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:11:25 UTC] PHP Stack trace:
+[09-Jun-2017 08:11:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:12:13 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:12:13 UTC] PHP Stack trace:
+[09-Jun-2017 08:12:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:12:14 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:12:14 UTC] PHP Stack trace:
+[09-Jun-2017 08:12:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:12:15 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:12:15 UTC] PHP Stack trace:
+[09-Jun-2017 08:12:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:12:16 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:12:16 UTC] PHP Stack trace:
+[09-Jun-2017 08:12:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:12:24 UTC] PHP Fatal error:  Class 'Slim\App' not found in /home/ubuntu/workspace/tfg/public/api.php on line 8
+[09-Jun-2017 08:12:24 UTC] PHP Stack trace:
+[09-Jun-2017 08:12:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:14:07 UTC] PHP Fatal error:  Call to undefined method Client::toArray() in /home/ubuntu/workspace/tfg/public/api.php on line 16
+[09-Jun-2017 08:14:07 UTC] PHP Stack trace:
+[09-Jun-2017 08:14:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:14:07 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:28
+[09-Jun-2017 08:14:07 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[09-Jun-2017 08:14:07 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[09-Jun-2017 08:14:07 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[09-Jun-2017 08:14:07 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[09-Jun-2017 08:14:07 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[09-Jun-2017 08:14:07 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[09-Jun-2017 08:14:07 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[09-Jun-2017 08:14:07 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[09-Jun-2017 08:14:07 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:10-24}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[09-Jun-2017 08:14:14 UTC] PHP Fatal error:  Call to undefined method Client::toArray() in /home/ubuntu/workspace/tfg/public/api.php on line 16
+[09-Jun-2017 08:14:14 UTC] PHP Stack trace:
+[09-Jun-2017 08:14:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[09-Jun-2017 08:14:14 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:28
+[09-Jun-2017 08:14:14 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[09-Jun-2017 08:14:14 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[09-Jun-2017 08:14:14 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[09-Jun-2017 08:14:14 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[09-Jun-2017 08:14:14 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[09-Jun-2017 08:14:14 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[09-Jun-2017 08:14:14 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[09-Jun-2017 08:14:14 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[09-Jun-2017 08:14:14 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:10-24}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:37:41 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:37:41 UTC] PHP Stack trace:
+[10-Jun-2017 11:37:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:37:41 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:37:41 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:37:41 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:37:41 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:37:41 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:37:41 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:37:41 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:37:41 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:37:41 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:37:41 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:38:24 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:38:24 UTC] PHP Stack trace:
+[10-Jun-2017 11:38:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:38:24 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:38:24 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:38:24 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:38:24 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:38:24 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:38:24 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:38:24 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:38:24 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:38:24 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:38:24 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:39:34 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:39:34 UTC] PHP Stack trace:
+[10-Jun-2017 11:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:39:34 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:39:34 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:39:34 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:39:34 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:39:34 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:39:34 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:39:34 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:39:34 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:39:34 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:39:34 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:40:03 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:40:03 UTC] PHP Stack trace:
+[10-Jun-2017 11:40:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:40:03 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:40:03 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:40:03 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:40:03 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:40:03 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:40:03 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:40:03 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:40:03 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:40:03 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:40:03 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:41:48 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:41:48 UTC] PHP Stack trace:
+[10-Jun-2017 11:41:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:41:48 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:41:48 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:41:48 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:41:48 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:41:48 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:41:48 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:41:48 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:41:48 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:41:48 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:41:48 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:43:03 UTC] PHP Fatal error:  Call to undefined method ClientController::insertItem() in /home/ubuntu/workspace/tfg/public/api.php on line 46
+[10-Jun-2017 11:43:03 UTC] PHP Stack trace:
+[10-Jun-2017 11:43:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 11:43:03 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:62
+[10-Jun-2017 11:43:03 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 11:43:03 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 11:43:03 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:43:03 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 11:43:03 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 11:43:03 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 11:43:03 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 11:43:03 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 11:43:03 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:42-54}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 17:53:26 UTC] PHP Fatal error:  Call to undefined method ProductController::getClients() in /home/ubuntu/workspace/tfg/public/api.php on line 98
+[10-Jun-2017 17:53:26 UTC] PHP Stack trace:
+[10-Jun-2017 17:53:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 17:53:26 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:112
+[10-Jun-2017 17:53:26 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 17:53:26 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 17:53:26 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 17:53:26 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 17:53:26 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 17:53:26 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 17:53:26 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 17:53:26 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 17:53:26 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:96-110}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 17:54:34 UTC] PHP Fatal error:  Call to undefined method Product::toArray() in /home/ubuntu/workspace/tfg/public/api.php on line 102
+[10-Jun-2017 17:54:34 UTC] PHP Stack trace:
+[10-Jun-2017 17:54:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 17:54:34 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:112
+[10-Jun-2017 17:54:34 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 17:54:34 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 17:54:34 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 17:54:34 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 17:54:34 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 17:54:34 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 17:54:34 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 17:54:34 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 17:54:34 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:96-110}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 18:12:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/tfg/public/api.php on line 118
+[10-Jun-2017 18:12:17 UTC] PHP Stack trace:
+[10-Jun-2017 18:12:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[10-Jun-2017 18:12:17 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:129
+[10-Jun-2017 18:12:17 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[10-Jun-2017 18:12:17 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[10-Jun-2017 18:12:17 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 18:12:17 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[10-Jun-2017 18:12:17 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[10-Jun-2017 18:12:17 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[10-Jun-2017 18:12:17 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[10-Jun-2017 18:12:17 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[10-Jun-2017 18:12:17 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:113-127}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41

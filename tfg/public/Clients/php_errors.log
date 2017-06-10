@@ -1,0 +1,1 @@
+[03-Jun-2017 09:49:35 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/tfg/public/Clients/forms/delete.php on line 9
