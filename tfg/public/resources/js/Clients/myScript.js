@@ -22,7 +22,7 @@ function getBasicData(){
                 items.push('<td class="text-center">'+value.surname+'</td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="detail.php?id='+value.id+'">View details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="update.php?id='+value.id+'">Update details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-danger" value=('+value.id+') onclick="sureAboutDelete()">Delete Client</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-client="'+value.id+'">Delete Client</a></td>');
                 items.push('</tr>');
             });
             items.push('</table>');
@@ -103,42 +103,35 @@ function createClient(){
 
 
 // Comprovation if user wants to delete Client
-function sureAboutDelete(){
-    console.log(this.value);
-    
-}
+$(document).on("click", "[data-delete-client]", function(evt) {
+
+  evt.preventDefault();
+
+  // 1. retrieve client ID
+  var id = $(this).data("delete-client");
+  
+  // 2. confirm
+  if(!confirm("Really delete client with ID: "+ id)) return; //do nothing if no confirmation, else:
+  
+  // 3. delete from database
+  deleteClient(id);
+  
+});
+
 
 // Delete Client
 function deleteClient(sid){
-    
-    $('#DelModal').modal('show');
-    
-    
     $.ajax({
     url: 'https://tfg-sergi-daw-neosmith.c9users.io/client/'+sid,
     type: 'DELETE',
-    // async : false,
-    // beforeSend: function(xhr, opts){
-    //     if ($('#delYes').click()){
-    //         return true;
-    //         console.log("delYes click");
-    //     } else {
-    //         console.log("delYes else");
-    //         xhr.abort();
-    //         $('#DelModal').modal('hide');
-    //     }
-    // },
     success: function(result){
         $.notify("Client Deleted","warn");
         getBasicData();
-        $('#DelModal').modal('hide');
     },
     error: function(){
         $.notify("Sorry, but something went wrong. Please try again.", "error");
     }
     });
-    
-    
 }
 
 
