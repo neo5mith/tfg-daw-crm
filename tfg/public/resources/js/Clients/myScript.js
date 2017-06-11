@@ -1,40 +1,9 @@
-// // Getting basic information from the project
-// function getBasicData(){
-//     $.ajax({
-//         url: 'https://tfg-sergi-daw-neosmith.c9users.io/clients',
-//         type: 'GET',
-//         success: function(result){
-//             var items = [];
-//             items.push('<ul>');
-//             $.each(result, function(key, value){
-//                 items.push('<li><h4>'+value.id+'</h4></li>'); 
-//                 items.push('<ul>');
-//                 $.each(value, function(field, val){
-//                     items.push('<li>'+field+':'+val+'</li>');    
-//                 });
-//                 items.push('</ul>');
-//             });
-//             items.push('</ul>');
-//             $('#tralari').html(items.join(''));
-//         }
-//     });
-// }
-
 /*global $*/
+/*global $notify*/
 
 
 //When window loaded, execute that function
 window.onload = getBasicData();
-
-
-// //Show add form for client
-// function showAddForm(){
-//     if($('#formAdd').is(":visible")){
-//         $('#formAdd').hide(1000);
-//     }else{
-//         $('#formAdd').show(1000);
-//     }
-// }
 
 
 // Getting basic information from the project and put it into a table
@@ -68,8 +37,34 @@ function getBasicData(){
 }
 
 
+function cleanModalInputs(){
+    if ($('#CancelAdd').click()){
+        var clean = "";
+        $('#dni').val(clean);
+        $('#name').val(clean);
+        $('#surname').val(clean);
+        $('#address').val(clean);
+        $('#city').val(clean);
+        $('#country').val(clean);
+        $('#phone').val(clean);
+        $('#mail').val(clean);
+    }
+}
+
+// Check all Fields are completed (in progress)
+function checkAllFieldsInserted(){
+    var empty = "";
+    if (($('#dni').value > 0) && ($('#name').value > 0) && ($('#surname').value > 0) && ($('#address').value > 0) && ($('#city').value > 0) && ($('#country').value > 0) && ($('#phone').value > 0) && ($('#mail').value > 0)){
+        createClient();
+    } else {
+        $.notify("You must complete all fields to Add the Client!","warn");
+    }
+}
+
+
 // Create Client, clean form, and hide modal
 function createClient(){
+    checkAllFieldsInserted();
     var item = {
         "dni": $('#dni').val(), 
         "name": $('#name').val(), 
@@ -96,10 +91,11 @@ function createClient(){
             $('#country').val(clean);
             $('#phone').val(clean);
             $('#mail').val(clean);
+            $.notify("Client added", "success");
             $('#AddModal').modal('hide');
         },
         error : function(){
-            alert("Sorry, but something went wrong. Please try again.");
+            $.notify("Sorry, but something went wrong. Please try again.", "error");
         }
     });
 }
@@ -108,26 +104,67 @@ function createClient(){
 // Delete Client
 function deleteClient(sid){
     
-    alert("Are you sure?");
-    
     $('#DelModal').modal('show');
     
-    if ($('#delYes').click()){
-        $.ajax({
-        url: 'https://tfg-sergi-daw-neosmith.c9users.io/client/'+sid,
-        type: 'DELETE',
-        success: function(result){
-            getBasicData();
-            $('#DelModal').modal('hide');
-        },
-        error: function(){
-            alert("Del, error");
-        }
-    });
-    } else {
+    
+    $.ajax({
+    url: 'https://tfg-sergi-daw-neosmith.c9users.io/client/'+sid,
+    type: 'DELETE',
+    // async : false,
+    // beforeSend: function(xhr, opts){
+    //     if ($('#delYes').click()){
+    //         return true;
+    //         console.log("delYes click");
+    //     } else {
+    //         console.log("delYes else");
+    //         xhr.abort();
+    //         $('#DelModal').modal('hide');
+    //     }
+    // },
+    success: function(result){
+        $.notify("Client Deleted","warn");
+        getBasicData();
         $('#DelModal').modal('hide');
+    },
+    error: function(){
+        $.notify("Sorry, but something went wrong. Please try again.", "error");
     }
+    });
     
     
 }
+
+
+
+// // Getting basic information from the project
+// function getBasicData(){
+//     $.ajax({
+//         url: 'https://tfg-sergi-daw-neosmith.c9users.io/clients',
+//         type: 'GET',
+//         success: function(result){
+//             var items = [];
+//             items.push('<ul>');
+//             $.each(result, function(key, value){
+//                 items.push('<li><h4>'+value.id+'</h4></li>'); 
+//                 items.push('<ul>');
+//                 $.each(value, function(field, val){
+//                     items.push('<li>'+field+':'+val+'</li>');    
+//                 });
+//                 items.push('</ul>');
+//             });
+//             items.push('</ul>');
+//             $('#tralari').html(items.join(''));
+//         }
+//     });
+// }
+
+
+// //Show add form for client
+// function showAddForm(){
+//     if($('#formAdd').is(":visible")){
+//         $('#formAdd').hide(1000);
+//     }else{
+//         $('#formAdd').show(1000);
+//     }
+// }
 

@@ -26,47 +26,47 @@ $type = "Clients";
               </div>
               <div class="modal-body">
                 <form class="form-inline" method="post">
-            <div class="form-group">
-              <label for="s1">Dni:</label>
-              <input type="text" name="dni" id="dni" tabindex="1" required>
-            </div>
-            <div class="form-group">
-              <label for="s2">Name:</label>
-              <input type="text" name="name" id="name" tabindex="2" required>
-            </div>
-            <div class="form-group">
-              <label for="s3">Surname:</label>
-              <input type="text" name="surname" id="surname" tabindex="3" required>
-            </div>
-            </br>
-            <div class="form-group">
-              <label for="s4">Address:</label>
-              <input type="text" name="address" id="address" tabindex="4" required>
-            </div>
-            <div class="form-group">
-              <label for="s5">City:</label>
-              <input type="text" name="city" id="city" tabindex="5" required>
-            </div>
-            <div class="form-group">
-              <label for="s6">Country:</label>
-              <input type="text" name="country" id="country" tabindex="6" required>
-            </div>
-            </br>
-            <div class="form-group">
-              <label for="s7">Phone:</label>
-              <input type="text" name="phone" id="phone" tabindex="7" required>
-            </div>
-            <div class="form-group">
-              <label for="s8">Mail:</label>
-              <input type="email" name="mail" id="mail" tabindex="8" required>
-            </div>
-            </br>
-          </form>
+                  <div class="form-group">
+                    <label for="s1">Dni:</label>
+                    <input class="form-control required" type="text" name="dni" id="dni" tabindex="1" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="s2">Name:</label>
+                    <input class="form-control required" type="text" name="name" id="name" tabindex="2" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="s3">Surname:</label>
+                    <input class="form-control required" type="text" name="surname" id="surname" tabindex="3" required>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s4">Address:</label>
+                    <input class="form-control required" type="text" name="address" id="address" tabindex="4" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="s5">City:</label>
+                    <input class="form-control required" type="text" name="city" id="city" tabindex="5" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="s6">Country:</label>
+                    <input class="form-control required" type="text" name="country" id="country" tabindex="6" required>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s7">Phone:</label>
+                    <input class="form-control required" type="text" name="phone" id="phone" tabindex="7" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="s8">Mail:</label>
+                    <input class="form-control required" type="email" name="mail" id="mail" tabindex="8" required>
+                  </div>
+                  </br>
+                </form>
               </div>
               <div class="modal-footer">
                 </br>
-                <button class="btn btn-success" type="submit" tabindex="9" onclick="createClient()">Add</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" type="submit" tabindex="9" onclick="checkAllFieldsInserted()">Add</button>
+                <button id="CancelAdd" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
               </div>
             </div>
             
