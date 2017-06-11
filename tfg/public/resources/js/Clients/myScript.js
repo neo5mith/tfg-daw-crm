@@ -22,7 +22,7 @@ function getBasicData(){
                 items.push('<td class="text-center">'+value.surname+'</td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="detail.php?id='+value.id+'">View details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="update.php?id='+value.id+'">Update details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-danger" onclick="deleteClient('+value.id+')">Delete Client</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-danger" value=('+value.id+') onclick="sureAboutDelete()">Delete Client</a></td>');
                 items.push('</tr>');
             });
             items.push('</table>');
@@ -49,20 +49,23 @@ function cleanModalInputs(){
     $('#mail').val(clean);
 }
 
+
+
 // Check all Fields are completed (in progress)
 function checkAllFieldsInserted(){
-    var empty = "";
-    if (($('#dni').value > 0) && ($('#name').value > 0) && ($('#surname').value > 0) && ($('#address').value > 0) && ($('#city').value > 0) && ($('#country').value > 0) && ($('#phone').value > 0) && ($('#mail').value > 0)){
-        createClient();
-    } else {
-        $.notify("You must complete all fields to Add the Client!","warn");
-    }
+    createClient();
+    // console.log($("#AddModal:input").val());
+    // var empty = "";
+    // if ($("#AddModal :input") !== "" && $("#AddModal :input").val() === 0){
+    //     createClient();
+    // } else {
+    //     $.notify("You must complete all fields to Add the Client!","warn");
+    // }
 }
 
 
 // Create Client, clean form, and hide modal
 function createClient(){
-    checkAllFieldsInserted();
     var item = {
         "dni": $('#dni').val(), 
         "name": $('#name').val(), 
@@ -98,6 +101,12 @@ function createClient(){
     });
 }
 
+
+// Comprovation if user wants to delete Client
+function sureAboutDelete(){
+    console.log(this.value);
+    
+}
 
 // Delete Client
 function deleteClient(sid){
