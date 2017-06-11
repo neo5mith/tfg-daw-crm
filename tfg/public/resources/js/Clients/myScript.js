@@ -36,19 +36,17 @@ function getBasicData(){
     });
 }
 
-
+//Clean modal form if Cancel is clicked
 function cleanModalInputs(){
-    if ($('#CancelAdd').click()){
-        var clean = "";
-        $('#dni').val(clean);
-        $('#name').val(clean);
-        $('#surname').val(clean);
-        $('#address').val(clean);
-        $('#city').val(clean);
-        $('#country').val(clean);
-        $('#phone').val(clean);
-        $('#mail').val(clean);
-    }
+    var clean = "";
+    $('#dni').val(clean);
+    $('#name').val(clean);
+    $('#surname').val(clean);
+    $('#address').val(clean);
+    $('#city').val(clean);
+    $('#country').val(clean);
+    $('#phone').val(clean);
+    $('#mail').val(clean);
 }
 
 // Check all Fields are completed (in progress)

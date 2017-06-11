@@ -34,6 +34,7 @@ $type = "Clients";
                     <label for="s2">Name:</label>
                     <input class="form-control required" type="text" name="name" id="name" tabindex="2" required>
                   </div>
+                  </br>
                   <div class="form-group">
                     <label for="s3">Surname:</label>
                     <input class="form-control required" type="text" name="surname" id="surname" tabindex="3" required>
@@ -66,7 +67,7 @@ $type = "Clients";
               <div class="modal-footer">
                 </br>
                 <button class="btn btn-success" type="submit" tabindex="9" onclick="checkAllFieldsInserted()">Add</button>
-                <button id="CancelAdd" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()">Cancel</button>
               </div>
             </div>
             
