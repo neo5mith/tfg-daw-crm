@@ -103,17 +103,23 @@ function createClient(){
 
 // Comprovation if user wants to delete Client
 $(document).on("click", "[data-delete-client]", function(evt) {
+    
+    evt.preventDefault();
+  
+    // 1. retrieve client ID
+    var id = $(this).data("delete-client");
+  
+    $('#delYes').data('deleteSure-client',id);
+  
+    $('#DelModal').modal('show');
 
-  evt.preventDefault();
-  
-  // 1. retrieve client ID
-  var id = $(this).data("delete-client");
-  
-  // 2. confirm
-  if(!confirm("Are you sure you want to DELETE client with ID: "+ id +" ?")) return; //do nothing if no confirmation, else:
-  
-  // 3. delete from database
-  deleteClient(id);
+});
+
+
+$(document).on("click", "[data-deleteSure-client]", function(evt) {
+    var id = $(this).data("deleteSure-client");
+    
+    deleteClient(id);
 });
 
 
@@ -123,6 +129,7 @@ function deleteClient(sid){
     url: 'https://tfg-sergi-daw-neosmith.c9users.io/client/'+sid,
     type: 'DELETE',
     success: function(result){
+        $('#DelModal').modal('hide');
         $.notify("Client Deleted","warn");
         getBasicData();
     },

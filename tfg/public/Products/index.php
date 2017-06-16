@@ -1,17 +1,5 @@
 <?php
 
-require_once(__DIR__.'/../../lib/controller/ProductController.php');
-
-session_start();
-
-$controller = new ProductController();
-
-$retorn = $controller->getProducts();
-
-$dataBase = $retorn[0];
-
-$stateDb = $retorn[1];
-
 $pageTitle = "PRODUCTS DB";
 
 $type = "Products";

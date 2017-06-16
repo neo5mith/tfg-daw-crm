@@ -1,8 +1,0 @@
-[21-May-2017 12:03:50 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 9
-[21-May-2017 12:09:48 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 9
-[21-May-2017 12:11:59 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 9
-[21-May-2017 12:13:46 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 15
-[21-May-2017 12:13:52 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 15
-[21-May-2017 12:15:09 UTC] PHP Parse error:  syntax error, unexpected '$ref' (T_VARIABLE) in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 15
-[21-May-2017 12:16:31 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 9
-[03-Jun-2017 09:52:50 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/tfg/public/Products/forms/update.php on line 9

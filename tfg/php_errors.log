@@ -424,3 +424,29 @@
 [16-Jun-2017 09:47:13 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
 [16-Jun-2017 09:47:13 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
 [16-Jun-2017 09:47:13 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:32-47}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[16-Jun-2017 15:22:05 UTC] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/ubuntu/workspace/tfg/public/api.php on line 40
+[16-Jun-2017 15:22:05 UTC] PHP Stack trace:
+[16-Jun-2017 15:22:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[16-Jun-2017 15:22:05 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:172
+[16-Jun-2017 15:22:05 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[16-Jun-2017 15:22:05 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[16-Jun-2017 15:22:05 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[16-Jun-2017 15:22:05 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[16-Jun-2017 15:22:05 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[16-Jun-2017 15:22:05 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[16-Jun-2017 15:22:05 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[16-Jun-2017 15:22:05 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[16-Jun-2017 15:22:05 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:32-47}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[16-Jun-2017 15:22:07 UTC] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/ubuntu/workspace/tfg/public/api.php on line 40
+[16-Jun-2017 15:22:07 UTC] PHP Stack trace:
+[16-Jun-2017 15:22:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[16-Jun-2017 15:22:07 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:172
+[16-Jun-2017 15:22:07 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[16-Jun-2017 15:22:07 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[16-Jun-2017 15:22:07 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[16-Jun-2017 15:22:07 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[16-Jun-2017 15:22:07 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[16-Jun-2017 15:22:07 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[16-Jun-2017 15:22:07 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[16-Jun-2017 15:22:07 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[16-Jun-2017 15:22:07 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:32-47}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
