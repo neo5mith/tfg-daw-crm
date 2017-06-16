@@ -14,6 +14,8 @@ $estatOp = $det[1];
 
 $namSur = $details->getName() . ' ' . $details->getSurname();
 
+// $id = $_GET['id'];
+
 $pageTitle = "Details of Client - $namSur";
 
 $type = "Clients";
@@ -22,7 +24,16 @@ $type = "Clients";
     
 <?php include(__DIR__.'/../resources/inc/header.php'); ?> <!--Header-->
 
+
       <div class="row">
+        
+        <!--Div where the Client data is inserted-->
+        <!--<div class="col-md-9">-->
+        <!--  <h1 class="text-center">Client Data</h1>-->
+          
+        <!--  <div id="clientDetails"></div>-->
+          
+        <!--</div>-->
         
         <div class="col-md-8">
           <p><b>Id:</b> <?= $details->getId() ?></p>

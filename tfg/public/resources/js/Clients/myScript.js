@@ -13,28 +13,28 @@ function getBasicData(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Id</th><th class="text-center">DNI</th><th class="text-center">Name</th><th class="text-center">Surname</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
+            items.push('<table class="table table-bordered"><tr><th class="text-center">DNI</th><th class="text-center">Name</th><th class="text-center">Surname</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
-                items.push('<td class="text-center"><a href="detail.php?id='+value.id+'">'+value.id+'</a></td>');
                 items.push('<td class="text-center">'+value.dni+'</td>');
                 items.push('<td class="text-center">'+value.name+'</td>');
                 items.push('<td class="text-center">'+value.surname+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="detail.php?id='+value.id+'">View details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" href="update.php?id='+value.id+'">Update details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-client="'+value.id+'">Delete Client</a></td>');
                 items.push('</tr>');
             });
             items.push('</table>');
-            $('#tralari').html(items.join(''));
+            $('#clientsTable').html(items.join(''));
         },
         error: function(){
             var items = [];
             items.push('<h2 class="text-center">There is no data from the DataBase.</h2>');
-            $('#tralari').html(items.join(''));
+            $('#clientsTable').html(items.join(''));
         }
     });
 }
+
 
 //Clean modal form if Cancel is clicked
 function cleanModalInputs(){
@@ -50,8 +50,7 @@ function cleanModalInputs(){
 }
 
 
-
-// Check all Fields are completed (in progress)
+// Check all Fields for ADD are completed (in progress*************************************)
 function checkAllFieldsInserted(){
     createClient();
     // console.log($("#AddModal:input").val());
@@ -106,16 +105,15 @@ function createClient(){
 $(document).on("click", "[data-delete-client]", function(evt) {
 
   evt.preventDefault();
-
+  
   // 1. retrieve client ID
   var id = $(this).data("delete-client");
   
   // 2. confirm
-  if(!confirm("Really delete client with ID: "+ id)) return; //do nothing if no confirmation, else:
+  if(!confirm("Are you sure you want to DELETE client with ID: "+ id +" ?")) return; //do nothing if no confirmation, else:
   
   // 3. delete from database
   deleteClient(id);
-  
 });
 
 
@@ -134,37 +132,114 @@ function deleteClient(sid){
     });
 }
 
+//When update buton clicked, take the id of the client and show modal of update, call the func to get details
+$(document).on("click", "[data-update-client]", function(evt) {
+    evt.preventDefault();
+
+    var id = $(this).data("update-client");
+    $('#UpdateModal').modal('show');
+
+    getClientDetailsEdit(id);
+});
+
+// Get Details of the Client and insert them into the modal of update client
+function getClientDetailsEdit(sid){
+
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/clientDet/'+sid,
+        type: 'GET',
+        success: function(result){
+            $("#uid").val(result.id);
+            $("#udni").val(result.dni);
+            $("#uname").val(result.name);
+            $("#usurname").val(result.surname);
+            $("#uaddress").val(result.address);
+            $("#ucity").val(result.city);
+            $("#ucountry").val(result.country);
+            $("#uphone").val(result.phone);
+            $("#umail").val(result.mail);
+        },
+        error: function(){
+
+        }
+    });
+}
 
 
-// // Getting basic information from the project
-// function getBasicData(){
-//     $.ajax({
-//         url: 'https://tfg-sergi-daw-neosmith.c9users.io/clients',
-//         type: 'GET',
-//         success: function(result){
-//             var items = [];
-//             items.push('<ul>');
-//             $.each(result, function(key, value){
-//                 items.push('<li><h4>'+value.id+'</h4></li>'); 
-//                 items.push('<ul>');
-//                 $.each(value, function(field, val){
-//                     items.push('<li>'+field+':'+val+'</li>');    
-//                 });
-//                 items.push('</ul>');
-//             });
-//             items.push('</ul>');
-//             $('#tralari').html(items.join(''));
-//         }
-//     });
-// }
+// Once updates are done and nothing is left behind, update client (PROGRES *******************************)
+function checkAllFieldsInsertedUpd(){
+    updateClient();
+    // console.log($("#UpdateModal:input").val());
+    // var empty = "";
+    // if ($("#UpdateModal :input") !== "" && $("#UpdateModal :input").val() === 0){
+    //     updateClient();
+    // } else {
+    //     $.notify("You must complete all fields to Update the Client!","warn");
+    // }
+}
 
 
-// //Show add form for client
-// function showAddForm(){
-//     if($('#formAdd').is(":visible")){
-//         $('#formAdd').hide(1000);
-//     }else{
-//         $('#formAdd').show(1000);
-//     }
-// }
+// Update Client
+function updateClient(){
+    var item = {
+        "id": $('#uid').val(),
+        "dni": $('#udni').val(), 
+        "name": $('#uname').val(), 
+        "surname": $('#usurname').val(), 
+        "address": $('#uaddress').val(),
+        "city": $('#ucity').val(), 
+        "country": $('#ucountry').val(),
+        "phone": $('#uphone').val(), 
+        "mail": $('#umail').val()
+    };
+    
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/clientUpdate',
+        type: 'PUT',
+        data: item,
+        success: function(result){
+            $('#UpdateModal').modal('hide');
+            getBasicData();
+            $.notify("Client Updated", "success");
+        },
+        error : function(){
+            $.notify("Sorry, but something went wrong. Please try again.", "error");
+        }
+    });
+}
+
+
+//When detail is click take the id from it's called, show the modal, and call the method to fill the info
+$(document).on("click", "[data-detail-client]", function(evt) {
+    evt.preventDefault();
+
+    var id = $(this).data("detail-client");
+    console.log("ID es: "+id);
+    $('#InfoModal').modal('show');
+
+    getClientDetails(id);
+});
+
+// Get Details of the Client and insert them into the modal of info client
+function getClientDetails(sid){
+
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/clientDet/'+sid,
+        type: 'GET',
+        success: function(result){
+            $("#iid").val(result.id);
+            $("#idni").val(result.dni);
+            $("#iname").val(result.name);
+            $("#isurname").val(result.surname);
+            $("#iaddress").val(result.address);
+            $("#icity").val(result.city);
+            $("#icountry").val(result.country);
+            $("#iphone").val(result.phone);
+            $("#imail").val(result.mail);
+        },
+        error: function(){
+
+        }
+    });
+}
 

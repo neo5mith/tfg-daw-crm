@@ -1,9 +1,3 @@
-<!--Llistat de orders ja creades-->
-
-<!--Per afegir productes, fer consulta a la MySql, i agafar la id del producte. Un cop es confirma la comanda, agafar totes les dades del producte-->
-
-<!--Per afegir el client igual, primer agafar el Nom, Cognom - id i despres agafar tota la seva info-->
-
 <!--{-->
 <!--    "_id" : 1675765767567576r56,-->
 <!--    "totalPrice" : "150.45",-->
@@ -12,6 +6,7 @@
 <!--        "city" : "Barcelona", "country" : "Spain", "phone" : "93678331285", "mail" : "maxcooper@gmail.com"},-->
 <!--    "products" : [{quantity:2,linePrice:347632,...}, {quantity:23}],-->
 <!--}-->
+
 
 <?php
 

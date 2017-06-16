@@ -29,9 +29,15 @@ $app->get('/clients', function($request, $response, array $args){
 
 
 //Get Client Details
-$app->get('/clients/{id}', function($request, $response, array $args){
+$app->get('/clientDet/{id}', function($request, $response, array $args){
+    $pid = $args['id'];
     $cnt = new ClientController();
-    $clientDetails = $cnt->getDetails($id);
+    $clientDet = $cnt->getDetails($pid);
+    
+    // var_dump($clientDet[0]);
+    // die;
+    
+    $clientDetails = $clientDet[0]->toArray();
     
     $response = $response->withHeader('Content-type', 'application/json');
     $body = $response->getBody();
@@ -55,6 +61,7 @@ $app->post('/client', function($request, $response, array $args){
     return $response;
 });
 
+
 // Delete client
 $app->delete('/client/{id}', function($request, $response, array $args){
     $pid = $args['id'];
@@ -69,9 +76,41 @@ $app->delete('/client/{id}', function($request, $response, array $args){
 });
 
 
+// Update Client Details
+$app->put('/clientUpdate', function($request, $response, array $args){
+    $data = $request->getParsedBody();
+    
+    $cnt = new ClientController();
+    $cnt->updateClient($data['id'], $data['dni'], $data['name'],$data['surname'], $data['address'], $data['city'], $data['country'], $data['phone'], $data['mail']);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
+
+    return $response;
+});
+
+
 //PRODUCTS--------------------
 
 //ORDERS----------------------
+//Get all orders (IN PROCESS__________________________)
+$app->get('/orders', function($request, $response, array $args){
+    $cnt = new ClientController();
+    $clients = $cnt->getClients();
+    
+    $clientsA = array();
+    foreach($clients[0] as $c){
+        array_push($clientsA, $c->toArray());
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($clientsA));
+
+    return $response;
+});
+
 
 //DASHBOARD-------------------
 
@@ -92,6 +131,7 @@ $app->get('/dashboard/lastClients', function($request, $response, array $args){
     return $response;
 });
 
+
 //Get last Products
 $app->get('/dashboard/lastProducts', function($request, $response, array $args){
     $cnt = new ProductController();
@@ -109,6 +149,7 @@ $app->get('/dashboard/lastProducts', function($request, $response, array $args){
     return $response;
 });
 
+
 //Get Products with stock under 50
 $app->get('/dashboard/StockWarning', function($request, $response, array $args){
     $cnt = new ProductController();
@@ -125,5 +166,7 @@ $app->get('/dashboard/StockWarning', function($request, $response, array $args){
 
     return $response;
 });
+
+
 
 $app->run();

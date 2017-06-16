@@ -7,7 +7,7 @@ class OrdersDb{
   private $collection;
 
 	private function openDatabaseConnection(){
-    $this->collection = (new MongoDB\Client)->tfg->clients;
+    $this->collection = (new MongoDB\Client)->tfg->orders;
 	}
 
   private function insertOrder($data){
