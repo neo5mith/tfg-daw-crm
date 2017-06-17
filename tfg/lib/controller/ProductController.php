@@ -14,7 +14,6 @@ class ProductController{
   }
 
   public function getProducts(){
-    
     $prod = new ProductDb();
     $products = $prod->getDb();
     

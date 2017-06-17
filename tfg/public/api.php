@@ -93,6 +93,84 @@ $app->put('/clientUpdate', function($request, $response, array $args){
 
 //PRODUCTS--------------------
 
+//Get all products
+$app->get('/products', function($request, $response, array $args){
+    $cnt = new ProductController();
+    $products = $cnt->getProducts();
+    
+    $productsA = array();
+    foreach($products[0] as $p){
+        array_push($productsA, $p->toArray());
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($productsA));
+
+    return $response;
+});
+
+
+//Get Product Details
+$app->get('/productDet/{id}', function($request, $response, array $args){
+    $pid = $args['id'];
+    $cnt = new ProductController();
+    $productDet = $cnt->getDetails($pid);
+    
+    $productDetails = $productDet[0]->toArray();
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($productDetails));
+
+    return $response;
+});
+
+
+//Insert Product
+$app->post('/product', function($request, $response, array $args){
+    $data = $request->getParsedBody();
+    
+    $cnt = new ProductController();
+    $cnt->addProduct($data['ref'], $data['brand'],$data['model'], $data['stock'], $data['description'], $data['dealer'], $data['price'], $data['dealerPrice']);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
+
+    return $response;
+});
+
+
+// Delete Product
+$app->delete('/product/{id}', function($request, $response, array $args){
+    $pid = $args['id'];
+    $cnt = new ProductController();
+    $product = $cnt->deleteProduct($pid);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
+
+    return $response;
+});
+
+
+// Update Product Details
+$app->put('/productUpdate', function($request, $response, array $args){
+    $data = $request->getParsedBody();
+    
+    $cnt = new ProductController();
+    $cnt->updateProduct($data['id'], $data['ref'], $data['brand'],$data['model'], $data['stock'], $data['description'], $data['dealer'], $data['price'], $data['dealerPrice']);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
+
+    return $response;
+});
+
+
 //ORDERS----------------------
 //Get all orders (IN PROCESS__________________________)
 $app->get('/orders', function($request, $response, array $args){

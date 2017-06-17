@@ -8,80 +8,257 @@ $type = "Products";
     
 <?php include(__DIR__.'/../resources/inc/header.php'); ?> <!--Header-->
       
+      <!--Modal for adding new Products-->
       <div class="row">
-        <div class="col-md-8">
+        
+         <!--Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddModal">Add Product</button>
+
+         <!--Modal -->
+        <div class="modal fade" id="AddModal" role="dialog">
+          <div class="modal-dialog">
           
-          <h3>Insert Product</h3>
-          </br>
-          
-          <form class="form-inline" action="forms/add.php" method="post">
-            <div class="form-group">
-              <label for="s1">Ref:</label>
-              <input type="number" name="ref" tabindex="1" required>
+             <!--Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add New Product</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-inline" method="post">
+                  <div class="form-group">
+                    <label for="s1">Ref:</label>
+                    <input type="number" name="ref" tabindex="1">
+                  </div>
+                  <div class="form-group">
+                    <label for="s2">Brand:</label>
+                    <input type="text" name="brand" tabindex="2">
+                  </div>
+                  <div class="form-group">
+                    <label for="s2">Model:</label>
+                    <input type="text" name="model" tabindex="3">
+                  </div>
+                  <div class="form-group">
+                    <label for="s3">Stock:</label>
+                    <input type="number" name="stock" tabindex="4">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s4">Description:</label>
+                    <input type="text" name="description" tabindex="5">
+                  </div>
+                  <div class="form-group">
+                    <label for="s5">Dealer:</label>
+                    <input type="text" name="dealer" tabindex="6">
+                  </div>
+                  <div class="form-group">
+                    <label for="s6">Price:</label>
+                    <input type="number" name="price" tabindex="7" step="0.01">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s7">Dealer Price:</label>
+                    <input type="number" name="dealerprice" tabindex="8" step="0.01">
+                  </div>
+                  </br>
+                </form>
+              </div>
+              <div class="modal-footer">
+                </br>
+                <button class="btn btn-success" type="submit" tabindex="9" onclick="checkAllFieldsInserted()">Add</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()">Cancel</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="s2">Brand:</label>
-              <input type="text" name="brand" tabindex="2" required>
-            </div>
-            <div class="form-group">
-              <label for="s2">Model:</label>
-              <input type="text" name="model" tabindex="3" required>
-            </div>
-            <div class="form-group">
-              <label for="s3">Stock:</label>
-              <input type="number" name="stock" tabindex="4" required>
-            </div>
-            </br>
-            <div class="form-group">
-              <label for="s4">Description:</label>
-              <input type="text" name="description" tabindex="5" required>
-            </div>
-            <div class="form-group">
-              <label for="s5">Dealer:</label>
-              <input type="text" name="dealer" tabindex="6" required>
-            </div>
-            <div class="form-group">
-              <label for="s6">Price:</label>
-              <input type="number" name="price" tabindex="7" step="0.01" required>
-            </div>
-            </br>
-            <div class="form-group">
-              <label for="s7">Dealer Price:</label>
-              <input type="number" name="dealerprice" tabindex="8" step="0.01" required>
-            </div>
-            </br>
-            <button class="btn btn-default" type="submit" tabindex="9">Add</button>
-          </form>
+            
+          </div>
         </div>
         
       </div>
+      
+      
+      <!--Modal for Viewing Product details-->
       <div class="row">
+                
+        <!--Modal -->
+        <div class="modal fade" id="InfoModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!--Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Product Data</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-inline" method="post">
+                  <div class="form-group">
+                    <label for="s1">Id:</label></br>
+                    <input class="form-control" type="text" name="id" id="iid" tabindex="1" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s1">Ref:</label></br>
+                    <input class="form-control" type="text" name="ref" id="iref" tabindex="1" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s2">Brand:</label></br>
+                    <input class="form-control" type="text" name="brand" id="ibrand" tabindex="2" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s3">Model:</label></br>
+                    <input class="form-control" type="text" name="model" id="imodel" tabindex="3" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s4">Stock:</label></br>
+                    <input class="form-control" type="text" name="stock" id="istock" tabindex="4" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s5">Description:</label></br>
+                    <input class="form-control" type="text" name="description" id="idescription" tabindex="5" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s6">Dealer:</label></br>
+                    <input class="form-control" type="text" name="dealer" id="idealer" tabindex="6" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s7">Price:</label></br>
+                    <input class="form-control" type="text" name="price" id="iprice" tabindex="7" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s8">Dealer Price:</label></br>
+                    <input class="form-control" type="dealerPrice" name="dealerPrice" id="idealerPrice" tabindex="8" readonly>
+                  </div>
+                  </br>
+                </form>
+              </div>
+              <div class="modal-footer">
+                </br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()">Cancel</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
         
+      </div>
+      
+      
+      <!--Modal for Updating Product details.-->
+      <div class="row">
+
+         <!--Modal -->
+        <div class="modal fade" id="UpdateModal" role="dialog">
+          <div class="modal-dialog">
+          
+             <!--Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Product Data Update</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-inline" method="post">
+                  <div class="form-group">
+                    <label for="s1">Id:</label></br>
+                    <input class="form-control" type="text" name="id" id="uid" tabindex="1" readonly>
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s1">Ref:</label></br>
+                    <input class="form-control" type="text" name="ref" id="uref" tabindex="2">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s2">Brand:</label></br>
+                    <input class="form-control" type="text" name="brand" id="ubrand" tabindex="3">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s3">Model:</label></br>
+                    <input class="form-control" type="text" name="model" id="umodel" tabindex="4">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s4">Stock:</label></br>
+                    <input class="form-control" type="text" name="stock" id="ustock" tabindex="5">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s5">Description:</label></br>
+                    <input class="form-control" type="text" name="description" id="udescription" tabindex="6">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s6">Dealer:</label></br>
+                    <input class="form-control" type="text" name="dealer" id="udealer" tabindex="7">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s7">Price:</label></br>
+                    <input class="form-control" type="text" name="price" id="uprice" tabindex="8">
+                  </div>
+                  </br>
+                  <div class="form-group">
+                    <label for="s8">Dealer Price:</label></br>
+                    <input class="form-control" type="dealerPrice" name="dealerPrice" id="udealerPrice" tabindex="9">
+                  </div>
+                  </br>
+                </form>
+              </div>
+              <div class="modal-footer">
+                </br>
+                <button class="btn btn-success" type="submit" tabindex="9" onclick="checkAllFieldsInsertedUpd()" tabindex="10">Update</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()" tabindex="11">Cancel</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      
+      <!--Modal for deleting a Product-->
+      <div class="row">
+
+        <div id="DelModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+             <!--Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Alert of deleting</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete the selected Product?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-deleteSure-product="" id="delYes">Yes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="row">
+      
+        <!--Div where the List of clients is inserted-->
         <div class="col-md-9">
           <h1 class="text-center">List of Products</h1>
-<?php if ($stateDb==1){ ?>
-          <table class="table table-bordered">
-            <!-- Titols de les columnes -->
-            <tr><th class="text-center">Id</th><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>
-            <!-- Foreach per anar iterant sobre el llistat i anar treient totes les dades -->
-<?php foreach ($dataBase as $prod){ ?>
-            <tr>
-              <td class="text-center"><a href="detail.php?id=<?= $prod->getId() ?>"><?=$prod->getId()?></a></td>
-              <td class="text-center"><?= $prod->getRef() ?></td>
-              <td class="text-center"><?= $prod->getBrand() ?></td>
-              <td class="text-center"><?= $prod->getModel() ?></td>
-              <td class="text-center"><?= $prod->getStock() ?></td>
-              <td class="text-center"><a type="button" class="btn btn-primary" href="detail.php?id=<?= $prod->getId() ?>">View details</a></td>
-              <td class="text-center"><a type="button" class="btn btn-primary" href="update.php?id=<?= $prod->getId() ?>">Update details</a></td>
-              <td class="text-center"><a type="button" class="btn btn-danger" id="del" href="forms/delete.php?id=<?= $prod->getId() ?>">Delete</a></td>
-            </tr>
-<?php } ?>
-          </table>
-<?php } elseif ($stateDb==0){ ?>
-          <h2 class="text-center">There is no data from the DataBase.</h2>
-<?php } else { ?>
-          <h2 class="text-center">There was a problem processing the data from MYSQL.</h2>
-<?php } ?>
+          
+          <div id="productsTable"></div>
+          
         </div>
         
         <div class="col-md-3 text-center">

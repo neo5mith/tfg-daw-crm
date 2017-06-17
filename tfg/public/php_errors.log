@@ -246,3 +246,15 @@
 [11-Jun-2017 19:23:25 UTC] PHP Fatal error:  Call to a member function getName() on a non-object in /home/ubuntu/workspace/tfg/public/Clients/detail.php on line 15
 [11-Jun-2017 19:23:25 UTC] PHP Stack trace:
 [11-Jun-2017 19:23:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/Clients/detail.php:0
+[16-Jun-2017 15:54:57 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/tfg/public/Products/index.php on line 68
+[16-Jun-2017 15:54:57 UTC] PHP Stack trace:
+[16-Jun-2017 15:54:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/Products/index.php:0
+[16-Jun-2017 17:20:41 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/tfg/public/Products/index.php on line 50
+[16-Jun-2017 17:20:41 UTC] PHP Stack trace:
+[16-Jun-2017 17:20:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/Products/index.php:0
+[16-Jun-2017 17:20:59 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/tfg/public/Products/index.php on line 17
+[16-Jun-2017 17:20:59 UTC] PHP Stack trace:
+[16-Jun-2017 17:20:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/Products/index.php:0
+[16-Jun-2017 17:21:02 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/tfg/public/Products/index.php on line 17
+[16-Jun-2017 17:21:02 UTC] PHP Stack trace:
+[16-Jun-2017 17:21:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/Products/index.php:0
