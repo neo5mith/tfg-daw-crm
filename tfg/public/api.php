@@ -150,7 +150,7 @@ $app->get('/productsref', function($request, $response, array $args){
     
     $productsA = array();
     foreach($products[0] as $p){
-        array_push($productsA, ["ref" => $p->getRef()]);
+        array_push($productsA, ["ref" => $p->getRef(), "brand" => $p->getBrand(), "model" => $p->getModel()]);
     }
     
     $response = $response->withHeader('Content-type', 'application/json');

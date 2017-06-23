@@ -69,7 +69,13 @@ $(document).ready(function () {
         list: {
             match: { enabled: true  }
         },
-        theme: "square" };
+        template: {
+    		type: "description",
+    		fields: {
+    			description: "model"
+    		}
+	    },
+	    theme: "square" };
     $("#ref").easyAutocomplete(options);
 });
 

@@ -37,7 +37,7 @@ $type = "Orders";
                   <h2 class="text-center">Products</h2>
                   <div class="form-group">
                     <label for="s2">Product:</label></br>
-                    <input class="form-inline" type="text" name="ref" id="ref" tabindex="2" placeholder="Ref of the Product">
+                    <input class="form-inline input-group-lg" type="text" name="ref" id="ref" tabindex="2" placeholder="Ref of the Product">
                     <label for="s2">Units:</label></br>
                     <input type="number" value="1" id="units" placeholder="Units" step="number"></input>
                     <button type="button" id="buttonLoadProductData" class="btn btn-success" onclick="getProductDetails()">Add Product</button>
