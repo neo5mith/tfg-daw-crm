@@ -4,6 +4,28 @@
 
 //When window loaded, execute that function
 window.onload = getBasicData();
+// window.onload = autocompleteBrands();
+
+
+// // Autocomplete Brands
+// function autocompleteBrands(){
+//     var options = {
+    
+//         url: "resources/brands.json",
+        
+//         getValue: "name",
+        
+//         list: {	
+//             match: {
+//               enabled: true
+//             }
+//         },
+        
+//         theme: "square"
+//     };
+    
+//     $("#brands").easyAutocomplete(options);
+// }
 
 
 // Getting basic information from the project and put it into a table

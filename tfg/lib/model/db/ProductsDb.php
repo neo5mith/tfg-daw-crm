@@ -167,7 +167,30 @@ class ProductDb{
     $sql = "SELECT id, ref, brand, model, stock, description, dealer, price, dealerprice FROM products WHERE id=$id";
     $result = mysqli_query($conn, $sql);
 
-    //$arrayProducts = array();
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        // output data of each row
+        $prod = new Product($row["id"],$row["ref"],$row["brand"],$row["model"],$row["stock"],$row["description"],$row["dealer"],$row["price"],$row["dealerprice"]);
+        //array_push($arrayProducts, $prod); #Inserir cada product al array
+        //$ret[0] = $arrayProducts; #array amb els objectes, el posem al array de retorn
+        $ret[0] = $prod;
+        $ret[1] = 1; #Estat de l'operacio, completat
+    } else {
+        $ret[1] = 0; #Estat de l'operacio, array buit
+    }
+
+    mysqli_close($conn);
+    return $ret;
+
+  }
+  
+  public function generateDetailsByRef($ref){
+
+    $conn = $this->createConnection();
+
+    $ret[0] = null;
+    $sql = "SELECT id, ref, brand, model, stock, description, dealer, price, dealerprice FROM products WHERE ref=$ref";
+    $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);

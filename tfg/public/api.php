@@ -27,6 +27,23 @@ $app->get('/clients', function($request, $response, array $args){
     return $response;
 });
 
+//Get all clients DNI to JSON, used to look for autocomplete
+$app->get('/clientsdni', function($request, $response, array $args){
+    $cnt = new ClientController();
+    $clients = $cnt->getClients();
+    
+    $clientsA = array();
+    foreach($clients[0] as $c){
+        array_push($clientsA, ["dni" => $c->getDni()]);
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($clientsA));
+
+    return $response;
+});
+
 
 //Get Client Details
 $app->get('/clientDet/{id}', function($request, $response, array $args){
@@ -34,10 +51,25 @@ $app->get('/clientDet/{id}', function($request, $response, array $args){
     $cnt = new ClientController();
     $clientDet = $cnt->getDetails($pid);
     
-    // var_dump($clientDet[0]);
-    // die;
+    $clientDetails = $clientDet[0]->toArray();
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($clientDetails));
+
+    return $response;
+});
+
+
+//Get Client Details by DNI
+$app->get('/clientDetByDni/{dni}', function($request, $response, array $args){
+    $pdni = $args['dni'];
+    $cnt = new ClientController();
+    $clientDet = $cnt->getDetailsByDni($pdni);
     
     $clientDetails = $clientDet[0]->toArray();
+    
+    //console.log("Detalls: "+clientDetails);
     
     $response = $response->withHeader('Content-type', 'application/json');
     $body = $response->getBody();
@@ -111,11 +143,47 @@ $app->get('/products', function($request, $response, array $args){
 });
 
 
+//Get all products Ref and put them into a JSON, used for autocomplete
+$app->get('/productsref', function($request, $response, array $args){
+    $cnt = new ProductController();
+    $products = $cnt->getProducts();
+    
+    $productsA = array();
+    foreach($products[0] as $p){
+        array_push($productsA, ["ref" => $p->getRef()]);
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($productsA));
+
+    return $response;
+});
+
+
 //Get Product Details
 $app->get('/productDet/{id}', function($request, $response, array $args){
     $pid = $args['id'];
     $cnt = new ProductController();
     $productDet = $cnt->getDetails($pid);
+    
+    $productDetails = $productDet[0]->toArray();
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($productDetails));
+
+    return $response;
+});
+
+
+//Get Product Details By Ref
+$app->get('/productDetByRef/{ref}', function($request, $response, array $args){
+    $pref = $args['ref'];
+    $cnt = new ProductController();
+    $productDet = $cnt->getDetailsByRef($pref);
+    
+    console.log("Api, productDetByRef, retorn de getDetailsByRef:"+productDet);
     
     $productDetails = $productDet[0]->toArray();
     
@@ -174,17 +242,19 @@ $app->put('/productUpdate', function($request, $response, array $args){
 //ORDERS----------------------
 //Get all orders (IN PROCESS__________________________)
 $app->get('/orders', function($request, $response, array $args){
-    $cnt = new ClientController();
-    $clients = $cnt->getClients();
+    $cnt = new OrderController();
+    $orders = $cnt->getOrders();
     
-    $clientsA = array();
-    foreach($clients[0] as $c){
-        array_push($clientsA, $c->toArray());
+    console.log("getOrders fet, retorn: "+orders);
+    
+    $ordersA = array();
+    foreach($orders as $o){
+        array_push($ordersA, $o->toArray());
     }
     
     $response = $response->withHeader('Content-type', 'application/json');
     $body = $response->getBody();
-    $body->write(json_encode($clientsA));
+    $body->write(json_encode($ordersA));
 
     return $response;
 });

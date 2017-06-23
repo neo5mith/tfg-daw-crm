@@ -41,6 +41,15 @@ class ClientController{
     
   }
   
+  public function getDetailsByDni($dni){
+    
+    $cli = new ClientDb();
+    $detailsByDni = $cli->generateDetailsByDni($dni);
+    
+    return $detailsByDni;
+    
+  }
+  
   public function deleteClient($id){
     
     $cli = new ClientDb();

@@ -221,7 +221,7 @@ $(document).on("click", "[data-detail-client]", function(evt) {
     evt.preventDefault();
 
     var id = $(this).data("detail-client");
-    console.log("ID es: "+id);
+    
     $('#InfoModal').modal('show');
 
     getClientDetails(id);
@@ -245,8 +245,20 @@ function getClientDetails(sid){
             $("#imail").val(result.mail);
         },
         error: function(){
-
+            
         }
     });
 }
 
+
+//Autocomplete Country Input with a JSON
+$(document).ready(function () {
+    var options = { url: "/resources/js/Clients/countries.js",
+        getValue: "name",
+        list: {
+            match: { enabled: true  }
+        },
+        theme: "square" };
+    $("#country").easyAutocomplete(options);
+    $("#ucountry").easyAutocomplete(options);
+});

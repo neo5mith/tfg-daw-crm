@@ -7,18 +7,32 @@ class Order{
   private $id;
   private $totalPrice;
   private $buyDate; //purchaseDate
-  private $state;
+  private $status;
   private $client;
   private $products;
 
   //Constructor
-  public function __construct($id, $totalPrice, $buyDate, $state, $client, $products){
+  public function __construct($id, $totalPrice, $buyDate, $status, $client, $products){
     $this->id = $id;
     $this->totalPrice = $totalPrice;
     $this->buyDate = $buyDate;
-    $this->state = $state;
+    $this->status = $status;
     $this->client = $client;
     $this->products = $products;
+  }
+  
+  public function toArray(){
+    
+    $ret = [
+      "id" => $this->id,
+      "totalPrice" => $this->totalPrice,
+      "buyDate" => $this->buyDate,
+      "status" => $this->status,
+      "client" => $this->client,
+      "products" => $this->products
+    ];
+    
+    return $ret;
   }
 
   //Getters

@@ -25,6 +25,16 @@
         <!--Notify.js jQuery plugin-->
         <script type="text/javascript" src="/resources/js/notify.min.js"></script>
         
+        <!--EasyAutocomplete-->
+        <!-- JS file -->
+        <script src="/resources/js/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js"></script> 
+        
+        <!-- CSS file -->
+        <!--<link rel="stylesheet" href="/resources/js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css"> -->
+        
+        <!-- Additional CSS Themes file - not required-->
+        <link rel="stylesheet" href="/resources/js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css"> 
+        
         <!--My javascript-->
         <script type="text/javascript" src="/resources/js/<?= $type ?>/myScript.js"></script>
         

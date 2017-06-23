@@ -40,6 +40,15 @@ class ProductController{
     
   }
   
+  public function getDetailsByRef($ref){
+    
+    $prod = new ProductDb();
+    $details = $prod->generateDetailsByRef($ref);
+    
+    return $details;
+    
+  }
+  
   public function deleteProduct($id){
     
     $prod = new ProductDb();

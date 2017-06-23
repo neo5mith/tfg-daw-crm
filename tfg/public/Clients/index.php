@@ -104,42 +104,41 @@ $type = "Clients";
                     <label for="s1">Id:</label></br>
                     <input class="form-control" type="text" name="id" id="iid" tabindex="1" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s1">Dni:</label></br>
                     <input class="form-control" type="text" name="dni" id="idni" tabindex="1" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s2">Name:</label></br>
                     <input class="form-control" type="text" name="name" id="iname" tabindex="2" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s3">Surname:</label></br>
                     <input class="form-control" type="text" name="surname" id="isurname" tabindex="3" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s4">Address:</label></br>
                     <input class="form-control" type="text" name="address" id="iaddress" tabindex="4" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s5">City:</label></br>
                     <input class="form-control" type="text" name="city" id="icity" tabindex="5" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s6">Country:</label></br>
                     <input class="form-control" type="text" name="country" id="icountry" tabindex="6" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s7">Phone:</label></br>
                     <input class="form-control" type="text" name="phone" id="iphone" tabindex="7" readonly>
                   </div>
-                  </br>
                   <div class="form-group">
                     <label for="s8">Mail:</label></br>
                     <input class="form-control" type="email" name="mail" id="imail" tabindex="8" readonly>
@@ -178,27 +177,27 @@ $type = "Clients";
                     <label for="s1">Id:</label></br>
                     <input class="form-control" type="text" name="id" id="uid" tabindex="1" readonly>
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s1">Dni:</label></br>
                     <input class="form-control" type="text" name="dni" id="udni" tabindex="2">
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s2">Name:</label></br>
                     <input class="form-control" type="text" name="name" id="uname" tabindex="3">
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s3">Surname:</label></br>
                     <input class="form-control" type="text" name="surname" id="usurname" tabindex="4">
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s4">Address:</label></br>
                     <input class="form-control" type="text" name="address" id="uaddress" tabindex="5">
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s5">City:</label></br>
                     <input class="form-control" type="text" name="city" id="ucity" tabindex="6">
@@ -213,12 +212,12 @@ $type = "Clients";
                     <label for="s7">Phone:</label></br>
                     <input class="form-control" type="text" name="phone" id="uphone" tabindex="8">
                   </div>
-                  </br>
+                  
                   <div class="form-group">
                     <label for="s8">Mail:</label></br>
                     <input class="form-control" type="email" name="mail" id="umail" tabindex="9">
                   </div>
-                  </br>
+                  
                 </form>
               </div>
               <div class="modal-footer">
