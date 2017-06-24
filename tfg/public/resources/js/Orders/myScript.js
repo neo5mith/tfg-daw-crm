@@ -39,11 +39,27 @@ function getBasicData(){
 
 // Create an Order
 function createOrder(){
+    
+    
+    
+    var products = [];
+    
+    $('tr').each(function() {
+      
+        $(this).find('td:first').each (function() {
+            console.log(this);
+            products.push(this);
+        }); 
+    
+    });
+    
     var item = {
-        "dni": $('#dni').val(), 
-        
+        "dni": $('#dni').val(),
+        "totalPrice" : 0,
+        "products" : products
     };
     
+    // I need to send: $totalPrice, $clientDni, $products
     $.ajax({
         url: 'https://tfg-sergi-daw-neosmith.c9users.io/client',
         type: 'POST',
