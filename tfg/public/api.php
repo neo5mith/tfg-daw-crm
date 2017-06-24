@@ -34,7 +34,7 @@ $app->get('/clientsdni', function($request, $response, array $args){
     
     $clientsA = array();
     foreach($clients[0] as $c){
-        array_push($clientsA, ["dni" => $c->getDni()]);
+        array_push($clientsA, ["dni" => $c->getDni(), "surname" => $c->getSurname()]);
     }
     
     $response = $response->withHeader('Content-type', 'application/json');
@@ -150,7 +150,8 @@ $app->get('/productsref', function($request, $response, array $args){
     
     $productsA = array();
     foreach($products[0] as $p){
-        array_push($productsA, ["ref" => $p->getRef(), "brand" => $p->getBrand(), "model" => $p->getModel()]);
+        $brandModel = $p->getBrand()." - ".$p->getModel();
+        array_push($productsA, ["ref" => $p->getRef(), "brandModel" => $brandModel]);
     }
     
     $response = $response->withHeader('Content-type', 'application/json');

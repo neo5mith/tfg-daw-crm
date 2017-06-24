@@ -18,6 +18,12 @@ $(document).ready(function () {
         list: {
             match: { enabled: true  }
         },
+    //     template: {
+    // 		type: "description",
+    // 		fields: {
+    // 			description: "surname"
+    // 		}
+	   // },
         theme: "square" };
     $("#dni").easyAutocomplete(options);
 });
@@ -65,6 +71,7 @@ function getClientDetails(){
 //Autocomplete for Ref input
 $(document).ready(function () {
     var options = { url: "/productsref",
+        
         getValue: "ref",
         list: {
             match: { enabled: true  }
@@ -72,9 +79,9 @@ $(document).ready(function () {
         template: {
     		type: "description",
     		fields: {
-    			description: "model"
+    		    description: "brandModel"
     		}
-	    },
+    	},
 	    theme: "square" };
     $("#ref").easyAutocomplete(options);
 });

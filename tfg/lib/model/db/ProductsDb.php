@@ -106,9 +106,6 @@ class ProductDb{
     $price = $priceI;
     $dealerprice = $dealerpriceI;
     $ret = $stmt->execute();
-    
-    //var_dump(mysqli_error($ret));
-    //die;
 
     $stmt->close();
     $conn->close();

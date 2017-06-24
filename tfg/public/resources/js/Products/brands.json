@@ -1,92 +1,47 @@
-{
-	{"name": "Amazon"
-		},
-	{"name": "American Apparel"
-		},
-	{"name": "Apple"
-		},
-	{"name": "Adobe"
-		},
-	{"name": "Acer"
-		},
-	{"name": "AT&T"
-		},
-	{"name": "BlackBerry"
-		},
-	{"name": "Bosch"
-		},
-	{"name": "BOSE"
-		},
-	{"name": "Boston Scientific"
-		},
-	{"name": "Braun"
-		},
-	{"name": "Canon"
-		},
-	{"name": "Casio"
-		},
-	{"name": "Cisco"
-		},
-	{"name": "Compaq"
-		},
-	{"name": "Coolpix"
-		},
-	{"name": "Cyber-Shot"
-		},
-	{"name": "Dell"
-		},
-	{"name": "Duracell"
-		},
-	{"name": "DYMO"
-		},
-	{"name": "Electrolux"
-		},
-	{"name": "Energizer"
-		},
-	{"name": "Epson"
-		},
-	{"name": "Garmin"
-		},
-	{"name": "Google"
-		},
-	{"name": "Hewlett-Packard"
-		},
-	{"name": "Huawei"
-		},
-	{"name": "JVC"
-		},
-	{"name": "McAfee"
-		},
-	{"name": "Medtronic"
-		},
-	{"name": "Meizu"
-		},
-	{"name": "Microsoft"
-		},
-	{"name": "Microsoft Office"
-		},
-	{"name": "Mountain"
-		},
-	{"name": "Netflix"
-		},
-	{"name": "Nexxus"
-		},
-	{"name": "Nikon"
-		},
-	{"name": "Nintendo"
-		},
-	{"name": "Nokia"
-		},
-	{"name": "Panasonic"
-		},
-	{"name": "Philips"
-		},
-	{"name": "Pioneer"
-		},
-	{"name": "Pixar"
-		},
-	{"name": "Polaroid"
-		},
-	{"name": "Xiaomi"
-		}
-]}
+[
+	{"name": "Amazon"},
+	{"name": "American Apparel"},
+	{"name": "Apple"},
+	{"name": "Adobe"},
+	{"name": "Acer"},
+	{"name": "AT&T"},
+	{"name": "BlackBerry"},
+	{"name": "Bosch"},
+	{"name": "BOSE"},
+	{"name": "Boston Scientific"},
+	{"name": "Braun"},
+	{"name": "Canon"},
+	{"name": "Casio"},
+	{"name": "Cisco"},
+	{"name": "Compaq"},
+	{"name": "Coolpix"},
+	{"name": "Cyber-Shot"},
+	{"name": "Dell"},
+	{"name": "Duracell"},
+	{"name": "DYMO"},
+	{"name": "Electrolux"},
+	{"name": "Energizer"},
+	{"name": "Epson"},
+	{"name": "Garmin"},
+	{"name": "Google"},
+	{"name": "Hewlett-Packard"},
+	{"name": "Huawei"},
+	{"name": "JVC"},
+	{"name": "McAfee"},
+	{"name": "Medtronic"},
+	{"name": "Meizu"},
+	{"name": "Microsoft"},
+	{"name": "Microsoft Office"},
+	{"name": "Mountain"},
+	{"name": "Netflix"},
+	{"name": "Nexxus"},
+	{"name": "Nikon"},
+	{"name": "Nintendo"},
+	{"name": "Nokia"},
+	{"name": "Panasonic"},
+	{"name": "Philips"},
+	{"name": "Pioneer"},
+	{"name": "Pixar"},
+	{"name": "Polaroid"},
+	{"name": "Xiaomi"}
+]

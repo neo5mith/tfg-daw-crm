@@ -1175,3 +1175,275 @@
 [23-Jun-2017 11:13:03 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
 [23-Jun-2017 11:13:03 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
 [23-Jun-2017 11:13:03 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:181-195}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:56:44 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 10:56:44 UTC] PHP Stack trace:
+[24-Jun-2017 10:56:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 10:56:44 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 10:56:44 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 10:56:44 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 10:56:44 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:56:44 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 10:56:44 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 10:56:44 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:56:44 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 10:56:44 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:56:44 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:56:44 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 10:56:44 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 10:56:44 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 10:57:55 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 10:57:55 UTC] PHP Stack trace:
+[24-Jun-2017 10:57:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 10:57:55 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 10:57:55 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 10:57:55 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 10:57:55 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:57:55 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 10:57:55 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 10:57:55 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:57:55 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 10:57:55 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:57:55 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:57:55 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 10:57:55 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 10:57:55 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 10:57:55 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 10:57:55 UTC] PHP Stack trace:
+[24-Jun-2017 10:57:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 10:57:55 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 10:57:55 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 10:57:55 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 10:57:55 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:57:55 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 10:57:55 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 10:57:55 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 10:57:55 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 10:57:55 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:57:55 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 10:57:55 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 10:57:55 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 10:57:55 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:02:58 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:02:58 UTC] PHP Stack trace:
+[24-Jun-2017 11:02:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:02:58 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:02:58 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:02:58 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:02:58 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:02:58 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:02:58 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:02:58 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:02:58 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:02:58 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:02:58 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:02:58 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:02:58 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:02:58 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:02:58 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:02:58 UTC] PHP Stack trace:
+[24-Jun-2017 11:02:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:02:58 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:02:58 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:02:58 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:02:58 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:02:58 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:02:58 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:02:58 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:02:58 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:02:58 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:02:58 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:02:58 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:02:58 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:02:58 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:04:40 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:04:40 UTC] PHP Stack trace:
+[24-Jun-2017 11:04:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:04:40 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:04:40 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:04:40 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:04:40 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:04:40 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:04:40 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:04:40 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:04:40 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:04:40 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:04:40 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:04:40 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:04:40 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:04:40 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:04:40 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:04:40 UTC] PHP Stack trace:
+[24-Jun-2017 11:04:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:04:40 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:04:40 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:04:40 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:04:40 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:04:40 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:04:40 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:04:40 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:04:40 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:04:40 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:04:40 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:04:40 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:04:40 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:04:40 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:06:22 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:06:22 UTC] PHP Stack trace:
+[24-Jun-2017 11:06:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:06:22 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:06:22 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:06:22 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:06:22 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:22 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:06:22 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:06:22 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:22 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:06:22 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:22 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:22 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:06:22 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:06:22 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:06:22 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:06:22 UTC] PHP Stack trace:
+[24-Jun-2017 11:06:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:06:22 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:06:22 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:06:22 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:06:22 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:22 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:06:22 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:06:22 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:22 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:06:22 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:22 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:22 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:06:22 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:06:22 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:06:47 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:06:47 UTC] PHP Stack trace:
+[24-Jun-2017 11:06:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:06:47 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:06:47 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:06:47 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:06:47 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:47 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:06:47 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:06:47 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:47 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:06:47 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:47 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:47 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:06:47 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:06:47 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:06:47 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:06:47 UTC] PHP Stack trace:
+[24-Jun-2017 11:06:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:06:47 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:06:47 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:06:47 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:06:47 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:47 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:06:47 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:06:47 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:06:47 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:06:47 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:47 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:06:47 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:06:47 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:06:47 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:09:20 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:09:20 UTC] PHP Stack trace:
+[24-Jun-2017 11:09:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:09:20 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:09:20 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:09:20 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:09:20 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:09:20 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:09:20 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:09:20 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:09:20 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:09:20 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:09:20 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:09:20 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:09:20 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:09:20 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:09:20 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:09:20 UTC] PHP Stack trace:
+[24-Jun-2017 11:09:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:09:20 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:09:20 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:09:20 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:09:20 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:09:20 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:09:20 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:09:20 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:09:20 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:09:20 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:09:20 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:09:20 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:09:20 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:09:20 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:10:08 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:10:08 UTC] PHP Stack trace:
+[24-Jun-2017 11:10:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:10:08 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:10:08 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:10:08 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:10:08 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:10:08 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:10:08 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:10:08 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:10:08 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:10:08 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:10:08 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:10:08 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:10:08 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:10:08 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:10:08 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:10:08 UTC] PHP Stack trace:
+[24-Jun-2017 11:10:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:10:08 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:10:08 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:10:08 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:10:08 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:10:08 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:10:08 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:10:08 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:10:08 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:10:08 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:10:08 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:10:08 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:10:08 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:10:08 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112
+[24-Jun-2017 11:12:23 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 110
+[24-Jun-2017 11:12:23 UTC] PHP Stack trace:
+[24-Jun-2017 11:12:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:12:23 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:12:23 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:12:23 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:12:23 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:12:23 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:12:23 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:12:23 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:12:23 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:12:23 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:12:23 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:12:23 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:12:23 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:12:23 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:110
+[24-Jun-2017 11:12:23 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php on line 112
+[24-Jun-2017 11:12:23 UTC] PHP Stack trace:
+[24-Jun-2017 11:12:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[24-Jun-2017 11:12:23 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:321
+[24-Jun-2017 11:12:23 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[24-Jun-2017 11:12:23 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[24-Jun-2017 11:12:23 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:12:23 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[24-Jun-2017 11:12:23 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[24-Jun-2017 11:12:23 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[24-Jun-2017 11:12:23 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[24-Jun-2017 11:12:23 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:12:23 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:200-211}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[24-Jun-2017 11:12:23 UTC] PHP  12. ProductController->addProduct() /home/ubuntu/workspace/tfg/public/api.php:204
+[24-Jun-2017 11:12:23 UTC] PHP  13. ProductDb->createProduct() /home/ubuntu/workspace/tfg/lib/controller/ProductController.php:10
+[24-Jun-2017 11:12:23 UTC] PHP  14. mysqli_error() /home/ubuntu/workspace/tfg/lib/model/db/ProductsDb.php:112

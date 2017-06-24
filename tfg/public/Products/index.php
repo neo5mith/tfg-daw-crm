@@ -28,42 +28,43 @@ $type = "Products";
                 <form class="form-inline" method="post">
                   <div class="form-group">
                     <label for="s1">Ref:</label>
-                    <input class="form-control" type="number" name="ref" tabindex="1">
+                    <input class="form-control" type="number" id="ref" name="ref" tabindex="1">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s2">Brand:</label>
-                    <input class="form-control" id="brands" type="text" name="brand" tabindex="2">
+                    <input class="form-control" type="text" id="brand" name="brand" tabindex="2">
+                    <!--<input class="form-control" type="text" id="brands" name="brand" tabindex="2">-->
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s2">Model:</label>
-                    <input class="form-control" type="text" name="model" tabindex="3">
+                    <input class="form-control" type="text" id="model"name="model" tabindex="3">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s3">Stock:</label>
-                    <input class="form-control" type="number" name="stock" tabindex="4">
+                    <input class="form-control" type="number" id="stock" name="stock" tabindex="4">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s4">Description:</label>
-                    <input class="form-control" type="text" name="description" tabindex="5">
+                    <input class="form-control" type="text" id="description" name="description" tabindex="5">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s5">Dealer:</label>
-                    <input class="form-control" type="text" name="dealer" tabindex="6">
+                    <input class="form-control" type="text" id="dealer" name="dealer" tabindex="6">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s6">Price:</label>
-                    <input class="form-control" type="number" name="price" tabindex="7" step="0.01">
+                    <input class="form-control" type="number" id="price" name="price" tabindex="7" step="0.01">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s7">Dealer Price:</label>
-                    <input class="form-control" type="number" name="dealerprice" tabindex="8" step="0.01">
+                    <input class="form-control" type="number" id="dealerPrice" name="dealerprice" tabindex="8" step="0.01">
                   </div>
                   </br>
                   <!--<div class="form-group">-->

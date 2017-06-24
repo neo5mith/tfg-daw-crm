@@ -85,7 +85,7 @@ function checkAllFieldsInserted(){
 // Create Product, clean form, and hide modal
 function createProduct(){
     var item = {
-        "ref": $('#ref').val(), 
+        "ref": $("#ref").val(), 
         "brand": $('#brand').val(), 
         "model": $('#model').val(), 
         "stock": $('#stock').val(),
@@ -243,7 +243,6 @@ $(document).on("click", "[data-detail-product]", function(evt) {
     evt.preventDefault();
 
     var id = $(this).data("detail-product");
-    console.log("ID es: "+id);
     $('#InfoModal').modal('show');
 
     getProductDetails(id);
