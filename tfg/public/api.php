@@ -240,8 +240,13 @@ $app->put('/productUpdate', function($request, $response, array $args){
 });
 
 
+//Upload Image for product (IN PROCESS_________________________)
+
+
+
 //ORDERS----------------------
-//Get all orders (IN PROCESS__________________________)
+
+//Get all orders (IN PROCESS__________________________________)
 $app->get('/orders', function($request, $response, array $args){
     $cnt = new OrderController();
     $orders = $cnt->getOrders();
@@ -259,6 +264,14 @@ $app->get('/orders', function($request, $response, array $args){
 
     return $response;
 });
+
+
+// Create Order
+
+
+
+// Order Details & update status
+
 
 
 //DASHBOARD-------------------

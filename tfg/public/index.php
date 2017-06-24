@@ -47,14 +47,14 @@ $type = "Dashboard";
         <div class="col-md-6 text-center">
           
           <h2>Products under 50 units !</h2>
-          <div id="stockWarning" class="col-md-6"></div>
+          <div id="stockWarning" class="col-md-12"></div>
           
         </div>
         
         <div class="col-md-6 text-center">
           
           <h2>Last 10 Orders</h2>
-          <div id="lastOrders" class="col-md-6"></div>
+          <div id="lastOrders" class="col-md-12"></div>
           
         </div>
         

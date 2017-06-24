@@ -22,51 +22,64 @@ $type = "Products";
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Add New Product</h4>
+                <h3 class="modal-title text-center">Add New Product</h3>
               </div>
               <div class="modal-body">
                 <form class="form-inline" method="post">
                   <div class="form-group">
                     <label for="s1">Ref:</label>
+                    </br>
                     <input class="form-control" type="number" id="ref" name="ref" tabindex="1">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s2">Brand:</label>
+                    </br>
                     <input class="form-control" type="text" id="brand" name="brand" tabindex="2">
                     <!--<input class="form-control" type="text" id="brands" name="brand" tabindex="2">-->
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s2">Model:</label>
+                    </br>
                     <input class="form-control" type="text" id="model"name="model" tabindex="3">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s3">Stock:</label>
+                    </br>
                     <input class="form-control" type="number" id="stock" name="stock" tabindex="4">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s4">Description:</label>
+                    </br>
                     <input class="form-control" type="text" id="description" name="description" tabindex="5">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s5">Dealer:</label>
+                    </br>
                     <input class="form-control" type="text" id="dealer" name="dealer" tabindex="6">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s6">Price:</label>
+                    </br>
                     <input class="form-control" type="number" id="price" name="price" tabindex="7" step="0.01">
                   </div>
                   </br>
                   <div class="form-group">
                     <label for="s7">Dealer Price:</label>
+                    </br>
                     <input class="form-control" type="number" id="dealerPrice" name="dealerprice" tabindex="8" step="0.01">
                   </div>
                   </br>
+                  <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <h3>Select image to upload:</h3>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <button class="btn btn-success" type="submit" name="submit">Upload</button>
+                  </form>
                   <!--<div class="form-group">-->
                   <!--  <label for="s7">Photo:</label>-->
                   <!--  <input class="form-control" type="text" name="photo" tabindex="9">-->
@@ -98,7 +111,7 @@ $type = "Products";
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Product Data</h4>
+                <h3 class="modal-title text-center">Product Data</h3>
               </div>
               <div class="modal-body">
                 <form class="form-inline" method="post">
@@ -172,7 +185,7 @@ $type = "Products";
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Product Data Update</h4>
+                <h3 class="modal-title text-center">Product Data Update</h3>
               </div>
               <div class="modal-body">
                 <form class="form-inline" method="post">
@@ -246,7 +259,7 @@ $type = "Products";
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Alert of deleting</h4>
+                <h3 class="modal-title text-center">Alert of deleting</h3>
               </div>
               <div class="modal-body">
                 <p>Are you sure you want to delete the selected Product?</p>

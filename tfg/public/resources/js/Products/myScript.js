@@ -35,16 +35,16 @@ function getBasicData(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Details</th><th class="text-center">Update</th><th class="text-center">Delete</th></tr>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.ref+'</td>');
                 items.push('<td class="text-center">'+value.brand+'</td>');
                 items.push('<td class="text-center">'+value.model+'</td>');
                 items.push('<td class="text-center">'+value.stock+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-product="'+value.id+'">View details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-product="'+value.id+'">Update details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-product="'+value.id+'">Delete Product</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-product="'+value.id+'">View</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-warning" data-update-product="'+value.id+'">Update</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-product="'+value.id+'">Delete</a></td>');
                 items.push('</tr>');
             });
             items.push('</table>');
@@ -270,4 +270,16 @@ function getProductDetails(sid){
         }
     });
 }
+
+
+//Autocomplete Brands Input with a JSON
+$(document).ready(function () {
+    var options = { url: "/resources/js/Products/brands.js",
+        getValue: "name",
+        list: {
+            match: { enabled: true  }
+        },
+        theme: "square" };
+    $("#brand").easyAutocomplete(options);
+});
 

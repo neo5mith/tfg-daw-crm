@@ -12,7 +12,7 @@ class OrderController{
   public function addOrder($totalPrice, $status, $clientDni, $products){
     
     //Get the data from the client
-    $cli = new ClientDb();
+    $cli = new ClientsDb();
     
     $clientInfo = $cli->generateDetailsByDni($clientDni);
     
@@ -33,7 +33,7 @@ class OrderController{
         'phone'=> $clientInfo->getPhone(), 'email'=> $clientInfo->getMail()], 
         'products'=> $prodArray];
     
-    $ord = new OrderDb();
+    $ord = new OrdersDb();
     
     $stat = $ord->insertOrder($data);
     
@@ -44,7 +44,7 @@ class OrderController{
 
   public function getOrders(){
     
-    $ord = new OrderDb();
+    $ord = new OrdersDb();
     $orders = $ord->getOrders();
     
     return $orders;
@@ -53,7 +53,7 @@ class OrderController{
   
   public function getDetails($id){
     
-    $ord = new OrderDb();
+    $ord = new OrdersDb();
     $details = $ord->detailOrder($id);
     
     return $details;
@@ -62,7 +62,7 @@ class OrderController{
   
   public function deleteOrder($id){
     
-    $ord = new OrderDb();
+    $ord = new OrdersDb();
     $ret = $ord->deleteOrder($id);
     
     //If return 1, it's been deleted
@@ -73,7 +73,7 @@ class OrderController{
   //Just be able to update the state of the order, nothing else !
   public function updateOrder($id, $state){
     
-    $ord = new OrderDb();
+    $ord = new OrdersDb();
     $ret = $ord->updateOrder($id, $state);
     
     //If return 1, it's been updated

@@ -1,5 +1,73 @@
 /* global $*/
 
+
+//When window loaded, execute that function
+window.onload = getBasicData();
+
+
+
+//Get all the Orders, and put them into a table
+function getBasicData(){
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/orders',
+        type: 'GET',
+        success: function(result){
+            var items = [];
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Client</th><th class="text-center">Buy Date</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
+            $.each(result, function(key, value){
+                items.push('<tr>'); 
+                items.push('<td class="text-center">'+value.id+'</td>');
+                items.push('<td class="text-center">'+value.client+'</td>');
+                items.push('<td class="text-center">'+value.buyDate+'</td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-client="'+value.id+'">Delete Client</a></td>');
+                items.push('</tr>');
+            });
+            items.push('</table>');
+            $('#ordersTable').html(items.join(''));
+        },
+        error: function(){
+            var items = [];
+            items.push('<h2 class="text-center">There is no data from the DataBase.</h2>');
+            $('#ordersTable').html(items.join(''));
+        }
+    });
+}
+
+
+
+// Create an Order
+function createOrder(){
+    var item = {
+        "dni": $('#dni').val(), 
+        
+    };
+    
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/client',
+        type: 'POST',
+        data: item,
+        success: function(result){
+            getBasicData();
+            var clean = "";
+            $('#dni').val(clean);
+            $('#name').val(clean);
+            $('#surname').val(clean);
+            $('#address').val(clean);
+            $('#city').val(clean);
+            $('#country').val(clean);
+            $('#phone').val(clean);
+            $('#mail').val(clean);
+            $.notify("Client added", "success");
+            $('#AddModal').modal('hide');
+        },
+        error : function(){
+            $.notify("Sorry, but something went wrong. Please try again.", "error");
+        }
+    });
+}
+
 //Clean modal form if Cancel is clicked
 function cleanModalInputs(){
     var clean = "";
