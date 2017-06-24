@@ -42,8 +42,8 @@ function getBasicData(){
                 items.push('<td class="text-center">'+value.brand+'</td>');
                 items.push('<td class="text-center">'+value.model+'</td>');
                 items.push('<td class="text-center">'+value.stock+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-product="'+value.id+'">View</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-warning" data-update-product="'+value.id+'">Update</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-product="'+value.id+'">View Details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-product="'+value.id+'">Update Details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-product="'+value.id+'">Delete</a></td>');
                 items.push('</tr>');
             });

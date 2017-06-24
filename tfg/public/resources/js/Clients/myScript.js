@@ -19,8 +19,8 @@ function getBasicData(){
                 items.push('<td class="text-center">'+value.dni+'</td>');
                 items.push('<td class="text-center">'+value.name+'</td>');
                 items.push('<td class="text-center">'+value.surname+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View Details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update Details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-client="'+value.id+'">Delete Client</a></td>');
                 items.push('</tr>');
             });
