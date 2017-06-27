@@ -50,7 +50,7 @@ function cleanModalInputs(){
 }
 
 
-// Check all Fields for ADD are completed (in progress*************************************)
+// Check all Fields for ADD are completed (in progress______________________________)
 function checkAllFieldsInserted(){
     createClient();
     // console.log($("#AddModal:input").val());

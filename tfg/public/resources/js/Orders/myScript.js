@@ -5,13 +5,14 @@
 window.onload = getBasicData();
 
 
-
 //Get all the Orders, and put them into a table
 function getBasicData(){
+    console.log("Entrem a getBasicData");
     $.ajax({
         url: 'https://tfg-sergi-daw-neosmith.c9users.io/orders',
         type: 'GET',
         success: function(result){
+            console.log("Dins de getBasicData, success");
             var items = [];
             items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Client</th><th class="text-center">Buy Date</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
             $.each(result, function(key, value){
@@ -27,7 +28,10 @@ function getBasicData(){
             items.push('</table>');
             $('#ordersTable').html(items.join(''));
         },
-        error: function(){
+        error: function(xhr, ajaxOptions, thrownError){
+            console.log("getBasicData, error");
+            console.log(xhr.status);
+            console.log(thrownError);
             var items = [];
             items.push('<h2 class="text-center">There is no data from the DataBase.</h2>');
             $('#ordersTable').html(items.join(''));
@@ -36,20 +40,36 @@ function getBasicData(){
 }
 
 
+// Check all Fields for ADD are completed (in progress______________________________)
+function checkAllFieldsInserted(){
+    createOrder();
+    // console.log($("#AddModal:input").val());
+    // var empty = "";
+    // if ($("#AddModal :input") !== "" && $("#AddModal :input").val() === 0){
+    //     createClient();
+    // } else {
+    //     $.notify("You must complete all fields to Add the Client!","warn");
+    // }
+}
+
 
 // Create an Order
 function createOrder(){
     
-    
-    
     var products = [];
+    
+    var totalPrice = 0;
     
     $('tr').each(function() {
       
         $(this).find('td:first').each (function() {
-            console.log(this);
-            products.push(this);
+            var value = $(this).html();
+            console.log(value);
+            products.push(value);
         }); 
+        
+        // Agafar el td numero 6 per anar calculant el preuTotal
+        // td:nth-child(6)
     
     });
     
@@ -61,7 +81,7 @@ function createOrder(){
     
     // I need to send: $totalPrice, $clientDni, $products
     $.ajax({
-        url: 'https://tfg-sergi-daw-neosmith.c9users.io/client',
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/order',
         type: 'POST',
         data: item,
         success: function(result){
@@ -75,7 +95,7 @@ function createOrder(){
             $('#country').val(clean);
             $('#phone').val(clean);
             $('#mail').val(clean);
-            $.notify("Client added", "success");
+            $.notify("Order added", "success");
             $('#AddModal').modal('hide');
         },
         error : function(){
@@ -202,6 +222,7 @@ function getProductDetails(){
                         items.push('<td class="text-center">'+result.brand+'</td>');
                         items.push('<td class="text-center">'+result.model+'</td>');
                         items.push('<td class="text-center">'+units+'</td>');
+                        items.push('<td class="text-center">'+price+'</td>');
                         items.push('<td class="text-center">'+(price*units)+'</td>');
                         items.push('</tr>');
                         
@@ -214,6 +235,8 @@ function getProductDetails(){
             //     $.notify("Sorry but you already have this Item into your Order.",{autoHide:false}, "error");
             // }
             
+            $("#ref").val("");
+            $("#units").val("1");
             
         }
         ,

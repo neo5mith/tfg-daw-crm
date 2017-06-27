@@ -50,7 +50,12 @@ function getBasicData(){
             items.push('</table>');
             $('#productsTable').html(items.join(''));
         },
-        error: function(ts) { console.log(ts.responseText) }
+        error: function(ts) { 
+            console.log(ts.responseText) 
+            var items = [];
+            items.push('<h2 class="text-center">There are no products yet or there is an error with the DB right now.</h2>');
+            $('#productsTable').html(items.join(''));
+        }
     });
 }
 

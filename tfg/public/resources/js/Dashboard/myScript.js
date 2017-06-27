@@ -51,7 +51,7 @@ function getLastProducts(){
         },
         error: function(){
             var items = [];
-            items.push('<h2 class="text-center">There are no clients yet or there is an error with the DB right now.</h2>');
+            items.push('<h2 class="text-center">There are no products yet or there is an error with the DB right now.</h2>');
             $('#lastProducts').html(items.join(''));
         }
     });
