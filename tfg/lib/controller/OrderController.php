@@ -9,24 +9,26 @@ class OrderController{
   /**
    * param $products Espero un array amb IDs de productes
    */
-  public function addOrder($totalPrice, $clientDni, $products){
+  public function addOrder($clientDni, $totalPrice, $products){
     
     //Get the data from the client
-    $cli = new ClientsDb();
+    $cli = new ClientDb();
     
-    $clientInfo = $cli->generateDetailsByDni($clientDni);
+    $clientResult = $cli->generateDetailsByDni($clientDni);
+    
+    $clientInfo = $clientResult[0];
     
     //Get the data from the products
-    $pro = new ProductsDb();
+    $pro = new ProductDb();
     
     $prodArray = array();
     foreach($products as $p){
       $prodInfo = $pro->generateDetails($p);
-      array_push($prodArray, $prodInfo);
+      array_push($prodArray, $prodInfo[0]->toArray());
     }
     
     //Put the data together for MongoDb
-    $data = ['totalPrice'=> $totalPrice, 'buyDate'=> new Date(), 'status'=> "Order Generate", 
+    $data = ['totalPrice'=> $totalPrice, 'buyDate'=> time(), 'status'=> "Order Generate", 
         'client'=> ['dni'=> $clientInfo->getDni(), 'name'=> $clientInfo->getName(), 
         'surname'=> $clientInfo->getSurname(), 'address'=> $clientInfo->getAddress(), 
         'city'=> $clientInfo->getCity, 'country'=> $clientInfo->getCountry(), 

@@ -75,7 +75,7 @@ $type = "Dashboard";
           
           <h2>10 last new Products</h2>
   
-          <div id="lastProducts" class="col-md-12"></div>
+          <div id="lastProducts" class="col-md-12 tablesorter"></div>
         
         </div>
       

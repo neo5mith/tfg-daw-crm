@@ -249,17 +249,17 @@ $app->put('/productUpdate', function($request, $response, array $args){
 //Get all orders (IN PROCESS__________________________________)
 $app->get('/orders', function($request, $response, array $args){
     
-    console.log("Entra a orders");
-    
     $cnt = new OrderController();
-    console.log("Crea controlador");
+    // console.log("Crea controlador");
     
     $orders = $cnt->getOrders();
-    console.log("Crida a getOrders i reb retorn");
-    console.log("Retorn es: "+orders);
+    // console.log("Crida a getOrders i reb retorn");
+    // console.log("Retorn es: "+orders);
     
     $ordersA = array();
+    
     foreach($orders as $o){
+        // console.log($o);
         array_push($ordersA, $o->toArray());
     }
     
@@ -275,8 +275,8 @@ $app->get('/orders', function($request, $response, array $args){
 $app->post('/order', function($request, $response, array $args){
     $data = $request->getParsedBody();
     
-    $cnt = new ProductController();
-    $cnt->addProduct($data['ref'], $data['brand'],$data['model'], $data['stock'], $data['description'], $data['dealer'], $data['price'], $data['dealerPrice']);
+    $cnt = new OrderController();
+    $cnt->addOrder($data['dni'], $data['totalPrice'],$data['products']);
     
     $response = $response->withHeader('Content-type', 'application/json');
     $body = $response->getBody();

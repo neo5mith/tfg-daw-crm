@@ -10,7 +10,7 @@ class OrdersDb{
     $this->collection = (new MongoDB\Client)->tfg->orders;
 	}
 
-  private function insertOrder($data){
+  public function insertOrder($data){
     $this->openDatabaseConnection();
     $this->collection->insertOne($data);
     $status = "1";
@@ -25,7 +25,11 @@ class OrdersDb{
   public function getOrders(){
     $this->openDatabaseConnection();
 		$res = $this->collection->find();
-		return $res;
+		$retorn = [];
+		foreach($res as $o){
+		  array_push($retorn, new Order($row["id"],$row["totalPrice"],$row["buyDate"],$row["status"],$row["client"],$row["products"]));
+		}
+		return $retorn;
   }
 
   public function deleteOrder($id){

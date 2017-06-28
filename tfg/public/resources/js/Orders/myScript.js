@@ -13,16 +13,16 @@ function getBasicData(){
         type: 'GET',
         success: function(result){
             console.log("Dins de getBasicData, success");
+            console.log("Data del success: "+result[0].id);
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Client</th><th class="text-center">Buy Date</th><th class="text-center">Details</th><th class="text-center">Update Details</th><th class="text-center">Delete</th></tr>');
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.id+'</td>');
-                items.push('<td class="text-center">'+value.client+'</td>');
                 items.push('<td class="text-center">'+value.buyDate+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-danger" data-delete-client="'+value.id+'">Delete Client</a></td>');
+                items.push('<td class="text-center">'+value.status+'</td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View Details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update Status</a></td>');
                 items.push('</tr>');
             });
             items.push('</table>');
@@ -66,16 +66,23 @@ function createOrder(){
             var value = $(this).html();
             console.log(value);
             products.push(value);
-        }); 
+        });
         
         // Agafar el td numero 6 per anar calculant el preuTotal
-        // td:nth-child(6)
+        $(this).find('td:nth-child(6)').each (function () {
+            var linePrice = parseFloat($(this).html());
+            totalPrice = linePrice + totalPrice;
+        });
     
     });
     
+    console.log("Dni: "+$('#dni').val());
+    
+    var dni = $('#dni').val();
+    
     var item = {
-        "dni": $('#dni').val(),
-        "totalPrice" : 0,
+        "dni": dni,
+        "totalPrice" : totalPrice,
         "products" : products
     };
     
@@ -87,7 +94,7 @@ function createOrder(){
         success: function(result){
             getBasicData();
             var clean = "";
-            $('#dni').val(clean);
+            //$('#dni').val(clean);
             $('#name').val(clean);
             $('#surname').val(clean);
             $('#address').val(clean);

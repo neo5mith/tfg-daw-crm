@@ -1,7 +1,20 @@
+/* global $*/
+
+
 //When window loaded, execute that function
 window.onload = getLastClients();
 window.onload = getLastProducts();
 window.onload = getProductsWarnStock();
+
+
+// When page is ready do...
+$(document).ready(function() 
+    { 
+        // NO VA ! -------------------------------------------
+        $("#lastProducts").tablesorter(); 
+    } 
+); 
+
 
 // Get 10 last Clients
 function getLastClients(){
@@ -36,7 +49,7 @@ function getLastProducts(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr>');
+            items.push('<table class="table table-bordered tablesorter"><thead><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr></thead><tbody>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.ref+'</td>');
@@ -46,7 +59,7 @@ function getLastProducts(){
                 items.push('<td class="text-center">'+value.price+'</td>');
                 items.push('</tr>');
             });
-            items.push('</table>');
+            items.push('</tbody></table>');
             $('#lastProducts').html(items.join(''));
         },
         error: function(){

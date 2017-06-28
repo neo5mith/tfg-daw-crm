@@ -11,15 +11,8 @@
                         <p>Created and Developed by: <strong>Sergi Bartual Pajuelo</strong></p>
                         <p>This is the End Project of Associate Degree for EUG Gimbernat</p>
                         <p>Contact information: <a href="mailto:sergibartual@gmail.com">sergibartual@gmail.com</a>.</p>
+                        <p>Thanks to my teacher <a href="http://www.xavisarda.com/">Xavi Sarda</a></p>
                     </footer>
-                </div>
-                
-            </div>
-    
-            <div class="row text-center">
-                
-                <div class="col-md-12 col-sm-12">
-                    <p><strong>Note:</strong> This may not be the last version of the footer, it's so ugly.</p>
                 </div>
                 
             </div>
