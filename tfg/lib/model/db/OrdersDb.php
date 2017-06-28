@@ -25,18 +25,18 @@ class OrdersDb{
   public function getOrders(){
     $this->openDatabaseConnection();
 		$res = $this->collection->find();
-		$retorn = [];
-		foreach($res as $o){
-		  array_push($retorn, new Order($row["id"],$row["totalPrice"],$row["buyDate"],$row["status"],$row["client"],$row["products"]));
+		$return = [];
+		foreach($res as $row){
+		  array_push($return, new Order($row["_id"]->__toString(),$row["totalPrice"],$row["buyDate"],$row["status"],$row["client"],$row["products"]));
 		}
-		return $retorn;
+		return $return;
   }
 
-  public function deleteOrder($id){
-    $this->openDatabaseConnection();
-		$this->collection->deleteOne(["_id" =>(new MongoDB\BSON\ObjectID($id))]);
-    return 1;
-  }
+  // public function deleteOrder($id){
+  //   $this->openDatabaseConnection();
+	//   $this->collection->deleteOne(["_id" =>(new MongoDB\BSON\ObjectID($id))]);
+  //   return 1;
+  // }
 
   public function detailOrder($id){
     $this->openDatabaseConnection();

@@ -246,21 +246,17 @@ $app->put('/productUpdate', function($request, $response, array $args){
 
 //ORDERS----------------------
 
-//Get all orders (IN PROCESS__________________________________)
+//Get all orders
 $app->get('/orders', function($request, $response, array $args){
     
     $cnt = new OrderController();
-    // console.log("Crea controlador");
     
-    $orders = $cnt->getOrders();
-    // console.log("Crida a getOrders i reb retorn");
-    // console.log("Retorn es: "+orders);
+    $orders = $cnt->getOrders();   //Get the return of all orders 
     
-    $ordersA = array();
+    $ordersA = array(); //Array for all orders
     
-    foreach($orders as $o){
-        // console.log($o);
-        array_push($ordersA, $o->toArray());
+    foreach($orders as $ord){
+        array_push($ordersA, $ord->toArray());
     }
     
     $response = $response->withHeader('Content-type', 'application/json');

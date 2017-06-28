@@ -6,7 +6,7 @@ class Order{
   //Atributes
   private $id;
   private $totalPrice;
-  private $buyDate; //purchaseDate
+  private $buyDate;
   private $status;
   private $client;
   private $products;

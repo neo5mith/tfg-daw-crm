@@ -13,25 +13,31 @@ function getBasicData(){
         type: 'GET',
         success: function(result){
             console.log("Dins de getBasicData, success");
-            console.log("Data del success: "+result[0].id);
+            
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
+            
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Total Price</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
+            
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.id+'</td>');
                 items.push('<td class="text-center">'+value.buyDate+'</td>');
+                items.push('<td class="text-center">'+value.totalPrice+'</td>');
                 items.push('<td class="text-center">'+value.status+'</td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View Details</a></td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update Status</a></td>');
                 items.push('</tr>');
             });
+            
             items.push('</table>');
+            
             $('#ordersTable').html(items.join(''));
+            
         },
         error: function(xhr, ajaxOptions, thrownError){
             console.log("getBasicData, error");
-            console.log(xhr.status);
-            console.log(thrownError);
+            // console.log(xhr.status);
+            // console.log(thrownError);
             var items = [];
             items.push('<h2 class="text-center">There is no data from the DataBase.</h2>');
             $('#ordersTable').html(items.join(''));
@@ -92,7 +98,6 @@ function createOrder(){
         type: 'POST',
         data: item,
         success: function(result){
-            getBasicData();
             var clean = "";
             //$('#dni').val(clean);
             $('#name').val(clean);
@@ -103,7 +108,8 @@ function createOrder(){
             $('#phone').val(clean);
             $('#mail').val(clean);
             $.notify("Order added", "success");
-            $('#AddModal').modal('hide');
+            getBasicData();
+            $('#CreateOrder').modal('hide');
         },
         error : function(){
             $.notify("Sorry, but something went wrong. Please try again.", "error");

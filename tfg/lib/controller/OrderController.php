@@ -7,7 +7,7 @@ require_once(__DIR__.'/../model/db/ProductsDb.php');
 class OrderController{
 
   /**
-   * param $products Espero un array amb IDs de productes
+   * param $products Array with the id's of the products
    */
   public function addOrder($clientDni, $totalPrice, $products){
     
@@ -28,10 +28,10 @@ class OrderController{
     }
     
     //Put the data together for MongoDb
-    $data = ['totalPrice'=> $totalPrice, 'buyDate'=> time(), 'status'=> "Order Generate", 
+    $data = ['totalPrice'=> $totalPrice, 'buyDate'=> time(), 'status'=> "Order Generated", 
         'client'=> ['dni'=> $clientInfo->getDni(), 'name'=> $clientInfo->getName(), 
         'surname'=> $clientInfo->getSurname(), 'address'=> $clientInfo->getAddress(), 
-        'city'=> $clientInfo->getCity, 'country'=> $clientInfo->getCountry(), 
+        'city'=> $clientInfo->getCity(), 'country'=> $clientInfo->getCountry(), 
         'phone'=> $clientInfo->getPhone(), 'email'=> $clientInfo->getMail()], 
         'products'=> $prodArray];
     
