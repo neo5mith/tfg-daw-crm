@@ -24,8 +24,8 @@ function getBasicData(){
                 items.push('<td class="text-center">'+value.buyDate+'</td>');
                 items.push('<td class="text-center">'+value.totalPrice+'</td>');
                 items.push('<td class="text-center">'+value.status+'</td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-client="'+value.id+'">View Details</a></td>');
-                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-client="'+value.id+'">Update Status</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-order="'+value.id+'">View Details</a></td>');
+                items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-update-order="'+value.id+'">Update Status</a></td>');
                 items.push('</tr>');
             });
             
@@ -74,6 +74,12 @@ function createOrder(){
             products.push(value);
         });
         
+        // Agafar el td numero 4 per les unitats agafades de cada producte
+        $(this).find('td:nth-child(4)').each (function () {
+            var lineUnits = parseFloat($(this).html());
+            totalPrice = linePrice + totalPrice;
+        });
+        
         // Agafar el td numero 6 per anar calculant el preuTotal
         $(this).find('td:nth-child(6)').each (function () {
             var linePrice = parseFloat($(this).html());
@@ -81,8 +87,6 @@ function createOrder(){
         });
     
     });
-    
-    console.log("Dni: "+$('#dni').val());
     
     var dni = $('#dni').val();
     
@@ -259,6 +263,68 @@ function getProductDetails(){
             console.log("Status: "+status);
             console.log("Message: "+ error);
             $.notify("Load of Product Failed, please try again", "error");
+        }
+    });
+}
+
+
+//Get Order Details
+//When details buton clicked, take the id of the product and show modal of details, call the func to get details
+$(document).on("click", "[data-detail-order]", function(evt) {
+    evt.preventDefault();
+
+    var id = $(this).data("detail-order");
+    $('#detailOrder').modal('show');
+
+    getOrdersDetails(id);
+});
+
+// Get Details of the Product and insert them into the modal of update product
+function getOrdersDetails(sid){
+
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/orderDetail/'+sid,
+        type: 'GET',
+        success: function(result){
+            
+            //info of the order
+            $("#did").val(result.id);
+            $("#dbuyDate").val(result.buyDate);
+            $("#dtotalPrice").val(result.totalPrice+" €");
+            $("#dstatus").val(result.status);
+            
+            // Info of the client
+            $("#ddni").val(result.client.dni);
+            $("#dname").val(result.client.name);
+            $("#dsurname").val(result.client.surname);
+            $("#daddress").val(result.client.address);
+            $("#dcity").val(result.client.city);
+            $("#dcountry").val(result.client.country);
+            $("#dphone").val(result.client.phone);
+            $("#dmail").val(result.client.email);
+            
+            // info of the products bought (table)
+            
+            $.each(result.products, function(key, val){
+                
+                var price = parseFloat(val.price);
+                // var units = parseFloat(val.units);
+                var items = [];
+                items.push('<tr class="prodTableDetails">'); 
+                items.push('<td class="text-center">'+val.ref+'</td>');
+                items.push('<td class="text-center">'+val.brand+'</td>');
+                items.push('<td class="text-center">'+val.model+'</td>');
+                items.push('<td class="text-center">Units</td>');
+                items.push('<td class="text-center">'+price+'</td>');
+                items.push('<td class="text-center">Total price here</td>');
+                items.push('</tr>');
+                
+                $(items.join('')).insertAfter("#headerTableProductsDet");
+            });
+            
+        },
+        error: function(ts){
+            console.log(ts.responseText);
         }
     });
 }

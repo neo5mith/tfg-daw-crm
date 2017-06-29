@@ -41,7 +41,8 @@ class OrdersDb{
   public function detailOrder($id){
     $this->openDatabaseConnection();
 		$res = $this->collection->findOne(["_id" =>(new MongoDB\BSON\ObjectID($id))]);
-		return $res;
+		$return = new Order($res["_id"]->__toString(),$res["totalPrice"],$res["buyDate"],$res["status"],$res["client"],$res["products"]);
+		return $return;
   }
   
 }

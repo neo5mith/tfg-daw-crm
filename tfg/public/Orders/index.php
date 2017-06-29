@@ -66,6 +66,104 @@ $type = "Orders";
         
       </div>
       
+      <div class="row">
+        
+        <!-- Modal for details of the order-->
+        <div id="detailOrder" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Order Details</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-inline" method="post">
+                  <div class="form-group">
+                    <label for="s1">Order Id:</label></br>
+                    <input class="form-control" type="text" name="id" id="did" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Buy Date:</label></br>
+                    <input class="form-control" type="text" id="dbuyDate" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Total Price:</label></br>
+                    <input class="form-control" type="text" id="dtotalPrice" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Status:</label></br>
+                    <input class="form-control" type="text" id="dstatus" tabindex="1" readonly>
+                  </div>
+                  
+                  </br>
+                  <h3>Client Info</h3>
+                  </br>
+                  <div class="form-group">
+                    <label for="s1">Dni:</label></br>
+                    <input class="form-control" type="text" name="dni" id="ddni" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s2">Name:</label></br>
+                    <input class="form-control" type="text" name="name" id="dname" tabindex="2" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s3">Surname:</label></br>
+                    <input class="form-control" type="text" name="surname" id="dsurname" tabindex="3" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s4">Address:</label></br>
+                    <input class="form-control" type="text" name="address" id="daddress" tabindex="4" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s5">City:</label></br>
+                    <input class="form-control" type="text" name="city" id="dcity" tabindex="5" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s6">Country:</label></br>
+                    <input class="form-control" type="text" name="country" id="dcountry" tabindex="6" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s7">Phone:</label></br>
+                    <input class="form-control" type="text" name="phone" id="dphone" tabindex="7" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="s8">Mail:</label></br>
+                    <input class="form-control" type="email" name="mail" id="dmail" tabindex="8" readonly>
+                  </div>
+                  </br>
+                  <h3>Products</h3>
+                  <div class="form-group col-md-12">
+                    <table class="col-md-12">
+                      <table class="table table-bordered">
+                        <tr id="headerTableProductsDet">
+                          <th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Units</th><th class="text-center">Price/Unit</th><th class="text-center">Total Price</th>
+                        </tr class="prodTableDetails">
+                    </table>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                </br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()">Close</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+      
       
       <div class="row">
         

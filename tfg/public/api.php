@@ -282,7 +282,24 @@ $app->post('/order', function($request, $response, array $args){
 });
 
 
-// Order Details & update status
+//Get a single order details
+$app->get('/orderDetail/{id}', function($request, $response, array $args){
+    $oid = $args['id'];
+    $cnt = new OrderController();
+    
+    $order = $cnt->getDetails($oid);
+    
+    $orderDetails = $order->toArray();
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($orderDetails));
+
+    return $response;
+});
+
+
+//Update status of the order
 
 
 
