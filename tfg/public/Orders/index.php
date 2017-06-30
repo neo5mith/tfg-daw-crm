@@ -45,11 +45,10 @@ $type = "Orders";
                   </br>
                   </br>
                   <div class="form-group col-md-12">
-                    <table class="col-md-12">
-                      <table class="table table-bordered">
-                        <tr id="headerTableProducts">
-                          <th class="text-center">ID</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Units</th><th class="text-center">Price/Unit</th><th class="text-center">Total Price</th>
-                        </tr class="prodTable">
+                    <table class="table table-bordered" id="tblprod">
+                      <tr id="headerTableProducts">
+                        <th class="text-center">ID</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Units</th><th class="text-center">Price/Unit</th><th class="text-center">Total Price</th>
+                      </tr class="prodTable">
                     </table>
                   </div>
                 </form>

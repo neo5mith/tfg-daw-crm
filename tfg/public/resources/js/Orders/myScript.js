@@ -139,7 +139,7 @@ function cleanModalInputs(){
     $("#clientInfo").remove();
     $(".prodTable").remove();
     $(".prodTableDetails").remove();
-    
+    $("#ustatus select").val(clean);
     $( '<div id="clientInfo"></div>' ).insertAfter( "#buttonLoadDniData" );
     $('.formDniLoad').show();
 }
@@ -302,7 +302,7 @@ $(document).on("click", "[data-detail-order]", function(evt) {
 });
 
 
-// Get Details of the Product and insert them into the modal of update product
+// Get Details of the Product and insert them into the modal of Order detail
 function getOrdersDetails(sid){
 
     $.ajax({
@@ -312,17 +312,11 @@ function getOrdersDetails(sid){
             
             var date = new Date(result.buyDate*1000);
             
-            var status = result.status;
-            
             //info of the order
             $("#did").val(result.id);
             $("#dbuyDate").val(date);
             $("#dtotalPrice").val(result.totalPrice+" €");
-            $("#dstatus").val(status);
-            $("#uid").val(result.id);
-            $("#ubuyDate").val(date);
-            $("#utotalPrice").val(result.totalPrice+" €");
-            $("#ustatus").val(status);
+            $("#dstatus").val(result.status);
             
             // Info of the client
             $("#ddni").val(result.client.dni);
@@ -335,7 +329,6 @@ function getOrdersDetails(sid){
             $("#dmail").val(result.client.email);
             
             // info of the products bought (table)
-            
             $.each(result.products, function(key, val){
                 
                 var price = parseFloat(val.price);
@@ -367,10 +360,36 @@ $(document).on("click", "[data-update-order]", function(evt) {
     
     evt.preventDefault();
     var id = $(this).data("update-order");
+    getOrdersDetailsUpd(id);
     $('#UpdateOrderState').modal('show');
-    getOrdersDetails(id);
+    
     
 });
+
+
+// Get Details of the Product and insert them into the modal of Order detail
+function getOrdersDetailsUpd(sid){
+
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/orderDetail/'+sid,
+        type: 'GET',
+        success: function(result){
+            
+            var date = new Date(result.buyDate*1000);
+            
+            var status = result.status;
+            
+            $("#uid").val(result.id);
+            $("#ubuyDate").val(date);
+            $("#utotalPrice").val(result.totalPrice+" €");
+            $("#ustatus select").html(status);
+            
+        },
+        error: function(ts){
+            console.log(ts.responseText);
+        }
+    });
+}
 
 
 // Get Details of the Product and insert them into the modal of update product
@@ -379,6 +398,7 @@ function updateOrderStatus(){
     var id = $("#uid").val();
     
     var state = $('#ustatus').val();
+    
     
     var item = {
         "id": id,
@@ -392,7 +412,8 @@ function updateOrderStatus(){
         success: function(result){
                 
             $('#UpdateOrderState').modal('hide');
-            $.notify("Order Status Updated succesfully", "success");
+            cleanModalInputs();
+            $.notify("Order Status Updated", "success");
             getBasicData();
         },
         error: function(xhr,status,error) {
@@ -402,4 +423,5 @@ function updateOrderStatus(){
             console.log("Message: "+ error);
         }
     });
+    
 }
