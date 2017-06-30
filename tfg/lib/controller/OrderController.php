@@ -9,7 +9,7 @@ class OrderController{
   /**
    * param $products Array with the id's of the products
    */
-  public function addOrder($clientDni, $totalPrice, $products){
+  public function addOrder($clientDni, $totalPrice, $products, $units){
     
     //Get the data from the client
     $cli = new ClientDb();
@@ -22,9 +22,20 @@ class OrderController{
     $pro = new ProductDb();
     
     $prodArray = array();
-    foreach($products as $p){
-      $prodInfo = $pro->generateDetails($p);
-      array_push($prodArray, $prodInfo[0]->toArray());
+    
+   // foreach($products as $p){
+    //  $prodInfo = $pro->generateDetails($p);
+    //  $testA = $prodInfo[0]->toArray();
+    //  array_push($prodArray, $testA);
+    //}
+    
+    $prods = count($products);
+    for($i = 0 ; $i < $prods ; $i++){
+      $prodInfo = $pro->generateDetails($products[$i]);
+      $testA = $prodInfo[0]->toArray();
+      $testA['units'] = $units[$i];
+      $testA['linePrice'] = $testA['price']*$testA['units'];
+      array_push($prodArray, $testA);
     }
     
     //Put the data together for MongoDb

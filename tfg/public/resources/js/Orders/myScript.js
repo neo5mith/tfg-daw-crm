@@ -7,21 +7,24 @@ window.onload = getBasicData();
 
 //Get all the Orders, and put them into a table
 function getBasicData(){
-    console.log("Entrem a getBasicData");
+    // console.log("Entrem a getBasicData");
     $.ajax({
         url: 'https://tfg-sergi-daw-neosmith.c9users.io/orders',
         type: 'GET',
         success: function(result){
-            console.log("Dins de getBasicData, success");
+            // console.log("Dins de getBasicData, success");
             
             var items = [];
             
             items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Total Price</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
             
             $.each(result, function(key, value){
+                
+                var date = new Date(value.buyDate*1000);
+                
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.id+'</td>');
-                items.push('<td class="text-center">'+value.buyDate+'</td>');
+                items.push('<td class="text-center">'+date+'</td>');
                 items.push('<td class="text-center">'+value.totalPrice+'</td>');
                 items.push('<td class="text-center">'+value.status+'</td>');
                 items.push('<td class="text-center"><a type="button" class="btn btn-primary" data-detail-order="'+value.id+'">View Details</a></td>');
@@ -64,26 +67,29 @@ function createOrder(){
     
     var products = [];
     
+    var units = [];
+    
     var totalPrice = 0;
     
     $('tr').each(function() {
       
-        $(this).find('td:first').each (function() {
+        $(this).find('td.prodId:first').each (function() {
             var value = $(this).html();
-            console.log(value);
             products.push(value);
         });
         
-        // Agafar el td numero 4 per les unitats agafades de cada producte
-        $(this).find('td:nth-child(4)').each (function () {
-            var lineUnits = parseFloat($(this).html());
-            totalPrice = linePrice + totalPrice;
+        //Agafar el td numero 4 per les unitats agafades de cada producte
+        $(this).find('td.prodUnits:nth-child(4)').each (function () {
+            var un = parseFloat($(this).html());
+            units.push(un);
         });
         
         // Agafar el td numero 6 per anar calculant el preuTotal
-        $(this).find('td:nth-child(6)').each (function () {
-            var linePrice = parseFloat($(this).html());
-            totalPrice = linePrice + totalPrice;
+        $(this).find('td.prodPrice:nth-child(6)').each (function () {
+            var linePrice = parseFloat($(this).val());
+            var totalPrice = linePrice + totalPrice;
+            console.log("Line Price: ")
+            console.log(linePrice);
         });
     
     });
@@ -93,7 +99,8 @@ function createOrder(){
     var item = {
         "dni": dni,
         "totalPrice" : totalPrice,
-        "products" : products
+        "products" : products,
+        "units": units
     };
     
     // I need to send: $totalPrice, $clientDni, $products
@@ -139,12 +146,12 @@ $(document).ready(function () {
         list: {
             match: { enabled: true  }
         },
-    //     template: {
-    // 		type: "description",
-    // 		fields: {
-    // 			description: "surname"
-    // 		}
-	   // },
+        template: {
+    		type: "description",
+    		fields: {
+    			description: "surname"
+    		}
+	    },
         theme: "square" };
     $("#dni").easyAutocomplete(options);
 });
@@ -213,7 +220,7 @@ function getProductDetails(){
 
     var ref = $("#ref").val();
     var uni = $("#units").val();
-
+    
     $.ajax({
         url: 'https://tfg-sergi-daw-neosmith.c9users.io/productDetByRef/'+ref,
         type: 'GET',
@@ -223,34 +230,28 @@ function getProductDetails(){
             var price = parseFloat(result.price);
             var units = parseFloat(uni);
             
-            // Check if the Product is already in the table
-            // if (productAlreadyAtOrder(ref)){
-                // Check if stock is not 0 or less
-                if (stock <= 0){
-                    $.notify("Sorry but this Product is currently out of Stock, ask for a reservation.",{autoHide:false}, "error");
-                } else{
-                    // Check if the units asked, can be supplied by the actual stock
-                    if (stock - units < 0){
-                        $.notify("Sorry but we just have "+stock+" units on Stock, not "+units+".",{autoHide:false}, "error");
-                    } else {
-                        var items = [];
-                        items.push('<tr class="prodTable">'); 
-                        items.push('<td class="text-center">'+result.id+'</td>');
-                        items.push('<td class="text-center">'+result.brand+'</td>');
-                        items.push('<td class="text-center">'+result.model+'</td>');
-                        items.push('<td class="text-center">'+units+'</td>');
-                        items.push('<td class="text-center">'+price+'</td>');
-                        items.push('<td class="text-center">'+(price*units)+'</td>');
-                        items.push('</tr>');
-                        
-                        $(items.join('')).insertAfter("#headerTableProducts");
-                        
-                        $.notify("Product added to the Order", "success");
-                    }
+            if (stock <= 0){
+                $.notify("Sorry but this Product is currently out of Stock, ask for a reservation.",{autoHide:false}, "error");
+            } else{
+                // Check if the units asked, can be supplied by the actual stock
+                if (stock - units < 0){
+                    $.notify("Sorry but we just have "+stock+" units on Stock, not "+units+".",{autoHide:false}, "error");
+                } else {
+                    var items = [];
+                    items.push('<tr class="prodTable">'); 
+                    items.push('<td class="text-center prodId">'+result.id+'</td>');
+                    items.push('<td class="text-center">'+result.brand+'</td>');
+                    items.push('<td class="text-center">'+result.model+'</td>');
+                    items.push('<td class="text-center prodUnits">'+units+'</td>');
+                    items.push('<td class="text-center prodPrice">'+price+'</td>');
+                    items.push('<td class="text-center">'+(price*units)+'</td>');
+                    items.push('</tr>');
+                    
+                    $(items.join('')).insertAfter("#headerTableProducts");
+                    
+                    $.notify("Product added to the Order", "success");
                 }
-            // } else {
-            //     $.notify("Sorry but you already have this Item into your Order.",{autoHide:false}, "error");
-            // }
+            }
             
             $("#ref").val("");
             $("#units").val("1");
@@ -262,6 +263,8 @@ function getProductDetails(){
             console.log("xhr: "+xhr);
             console.log("Status: "+status);
             console.log("Message: "+ error);
+            $("#ref").val("");
+            $("#units").val("1");
             $.notify("Load of Product Failed, please try again", "error");
         }
     });
@@ -279,6 +282,7 @@ $(document).on("click", "[data-detail-order]", function(evt) {
     getOrdersDetails(id);
 });
 
+
 // Get Details of the Product and insert them into the modal of update product
 function getOrdersDetails(sid){
 
@@ -292,6 +296,10 @@ function getOrdersDetails(sid){
             $("#dbuyDate").val(result.buyDate);
             $("#dtotalPrice").val(result.totalPrice+" €");
             $("#dstatus").val(result.status);
+            $("#uid").val(result.id);
+            $("#ubuyDate").val(result.buyDate);
+            $("#utotalPrice").val(result.totalPrice+" €");
+            $("#ustatus").val(result.status);
             
             // Info of the client
             $("#ddni").val(result.client.dni);
@@ -314,9 +322,9 @@ function getOrdersDetails(sid){
                 items.push('<td class="text-center">'+val.ref+'</td>');
                 items.push('<td class="text-center">'+val.brand+'</td>');
                 items.push('<td class="text-center">'+val.model+'</td>');
-                items.push('<td class="text-center">Units</td>');
+                items.push('<td class="text-center">'+val.units+'</td>');
                 items.push('<td class="text-center">'+price+'</td>');
-                items.push('<td class="text-center">Total price here</td>');
+                items.push('<td class="text-center">'+val.linePrice+'</td>');
                 items.push('</tr>');
                 
                 $(items.join('')).insertAfter("#headerTableProductsDet");
@@ -330,22 +338,45 @@ function getOrdersDetails(sid){
 }
 
 
-// var arrIdProducts = [];
+//Update Status of an Order
+//When Update Status buton clicked, take the id of the product open modal, and get the status to send it
+$(document).on("click", "[data-update-order]", function(evt) {
+    
+    evt.preventDefault();
+    var id = $(this).data("update-order");
+    $('#UpdateOrderState').modal('show');
+    getOrdersDetails(id);
+    
+});
 
-// // Function to check that an Order don't take 2 times the same product, it has to be put 
-// function productAlreadyAtOrder($prodId){
-//     console.log("Entra a productAlreadyAtOrder");
-//     console.log("La id es: "+$prodId);
-//     var id = $prodId;
-//     $.each(arrIdProducts, function( index, value ) {
-//         console.log("Entra al each");
-//         console.log("Id: "+id);
-//         console.log("value: "+value);
-//         if (id === value){
-//             return true;
-//         } else {
-//             arrIdProducts.push(id);
-//             return false;
-//         }
-// });
-// }
+
+// Get Details of the Product and insert them into the modal of update product
+function updateOrderStatus(){
+    
+    var id = $("#uid").val();
+    
+    var state = $('#ustatus').val();
+    
+    var item = {
+        "id": id,
+        "status": state
+    }
+    
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/orderStatusUpd',
+        type: 'PUT',
+        data: item,
+        success: function(result){
+                
+            $('#UpdateOrderState').modal('hide');
+            getBasicData();
+            $.notify("Order Status Updated succesfully", "success");
+        },
+        error: function(xhr,status,error) {
+            console.log("Error at AJAX request");
+            console.log("xhr: "+xhr);
+            console.log("Status: "+status);
+            console.log("Message: "+ error);
+        }
+    });
+}

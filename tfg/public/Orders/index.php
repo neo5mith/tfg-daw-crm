@@ -164,6 +164,60 @@ $type = "Orders";
         
       </div>
       
+      <div class="row">
+        
+        <!-- Modal for Editing State of the order-->
+        <div id="UpdateOrderState" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Order Status Update</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-inline" method="post">
+                  <div class="form-group">
+                    <label for="s1">Order Id:</label></br>
+                    <input class="form-control" type="text" id="uid" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Buy Date:</label></br>
+                    <input class="form-control" type="text" id="ubuyDate" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Total Price:</label></br>
+                    <input class="form-control" type="text" id="utotalPrice" tabindex="1" readonly>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="s1">Status:</label></br>
+                    <select class="form-control" type="text" id="ustatus" tabindex="1">
+                      <option value="Payed">Payed</option>
+                      <option value="Cancelled">Cancelled</option>
+                      <option value="Order Generated">Order Generated</option>
+                      <option value="Reserved">Reserved</option>
+                    </select>
+                  </div>
+                  
+                </form>
+              </div>
+              <div class="modal-footer">
+                </br>
+                <button type="button" class="btn btn-success" onclick="updateOrderStatus()">Update Status</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cleanModalInputs()">Close</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+      
+      
       
       <div class="row">
         
@@ -173,6 +227,8 @@ $type = "Orders";
           <h1 class="text-center">List of Orders</h1>
           
           <div id="ordersTable"></div>
+          
+          <div id="totalPrice"></div>
           
         </div>
         

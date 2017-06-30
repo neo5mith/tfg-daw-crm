@@ -184,8 +184,6 @@ $app->get('/productDetByRef/{ref}', function($request, $response, array $args){
     $cnt = new ProductController();
     $productDet = $cnt->getDetailsByRef($pref);
     
-    console.log("Api, productDetByRef, retorn de getDetailsByRef:"+productDet);
-    
     $productDetails = $productDet[0]->toArray();
     
     $response = $response->withHeader('Content-type', 'application/json');
@@ -272,7 +270,8 @@ $app->post('/order', function($request, $response, array $args){
     $data = $request->getParsedBody();
     
     $cnt = new OrderController();
-    $cnt->addOrder($data['dni'], $data['totalPrice'],$data['products']);
+    
+    $ret = $cnt->addOrder($data['dni'], $data['totalPrice'],$data['products'],$data['units']);
     
     $response = $response->withHeader('Content-type', 'application/json');
     $body = $response->getBody();
@@ -300,7 +299,18 @@ $app->get('/orderDetail/{id}', function($request, $response, array $args){
 
 
 //Update status of the order
+$app->put('/orderStatusUpd', function($request, $response, array $args){
+    $data = $request->getParsedBody();
+    
+    $cnt = new OrderController();
+    $cnt->updateOrder($data['id'], $data['status']);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
 
+    return $response;
+});
 
 
 //DASHBOARD-------------------

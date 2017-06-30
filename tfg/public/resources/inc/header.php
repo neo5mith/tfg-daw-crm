@@ -34,9 +34,6 @@
         <!-- Additional CSS Themes file - not required-->
         <!--<link rel="stylesheet" href="/resources/js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css"> -->
         
-        <!--Jquery table sorter NO VA????¿?¿!?!!-->
-        <!--<script type="text/javascript" src="/resources/js/jquery.tablesorter/jquery.tablesorter.js"></script> -->
-        
         <!--My javascript-->
         <script type="text/javascript" src="/resources/js/<?= $type ?>/myScript.js"></script>
         

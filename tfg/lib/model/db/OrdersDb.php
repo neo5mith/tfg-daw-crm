@@ -18,7 +18,11 @@ class OrdersDb{
   }
 
   public function updateOrder($id,$state){
-    $this->collection->updateOne(["_id" =>(new MongoDB\BSON\ObjectID($id))],['$state' => $state]);
+    
+    $this->openDatabaseConnection();
+    
+    $result = $this->collection->updateOne(['_id' =>(new MongoDB\BSON\ObjectID($id))],['$set' => ['status' => $state]]);
+    
     return 1;
   }
 

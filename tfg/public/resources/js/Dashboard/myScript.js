@@ -7,15 +7,6 @@ window.onload = getLastProducts();
 window.onload = getProductsWarnStock();
 
 
-// When page is ready do...
-$(document).ready(function() 
-    { 
-        // NO VA ! -------------------------------------------
-        $("#lastProducts").tablesorter(); 
-    } 
-); 
-
-
 // Get 10 last Clients
 function getLastClients(){
     $.ajax({
@@ -49,7 +40,7 @@ function getLastProducts(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered tablesorter"><thead><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr></thead><tbody>');
+            items.push('<table class="table table-bordered"><thead><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr></thead><tbody>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.ref+'</td>');
