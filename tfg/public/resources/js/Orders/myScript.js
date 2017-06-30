@@ -16,7 +16,7 @@ function getBasicData(){
             
             var items = [];
             
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Total Price</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Order Id</th><th class="text-center">Buy Date</th><th class="text-center">Total Price (€)</th><th class="text-center">Status</th><th class="text-center">Details</th><th class="text-center">Update Status</th></tr>');
             
             $.each(result, function(key, value){
                 
@@ -84,17 +84,21 @@ function createOrder(){
             units.push(un);
         });
         
+        // console.log("Anem a recorrer tots els td on hi hagi prodPrice i sumant al total.");
         // Agafar el td numero 6 per anar calculant el preuTotal
-        $(this).find('td.prodPrice:nth-child(6)').each (function () {
-            var linePrice = parseFloat($(this).val());
-            var totalPrice = linePrice + totalPrice;
-            console.log("Line Price: ")
+        $(this).find('td.prodPrice').each (function () {
+            console.log("Ha entrat.");
+            var linePrice = parseFloat($(this).html());
+            console.log("Line Price: ");
             console.log(linePrice);
+            totalPrice = linePrice + parseFloat(totalPrice);
         });
     
     });
     
     var dni = $('#dni').val();
+    
+    console.log("Total prices es:"+totalPrice);
     
     var item = {
         "dni": dni,
@@ -134,6 +138,8 @@ function cleanModalInputs(){
     $('*').val(clean);
     $("#clientInfo").remove();
     $(".prodTable").remove();
+    $(".prodTableDetails").remove();
+    
     $( '<div id="clientInfo"></div>' ).insertAfter( "#buttonLoadDniData" );
     $('.formDniLoad').show();
 }
@@ -215,6 +221,19 @@ $(document).ready(function () {
 });
 
 
+//Check if units where selected
+function checkRefUnits(){
+    var uni = $("#units").val();
+    
+    if (uni >=1){
+        getProductDetails();
+    } else {
+        $.notify("Please check units before adding them.", "error");
+    }
+}
+
+
+
 // Load info of the Product Ref taken from autocomplete and put it into the table of products
 function getProductDetails(){
 
@@ -243,8 +262,8 @@ function getProductDetails(){
                     items.push('<td class="text-center">'+result.brand+'</td>');
                     items.push('<td class="text-center">'+result.model+'</td>');
                     items.push('<td class="text-center prodUnits">'+units+'</td>');
-                    items.push('<td class="text-center prodPrice">'+price+'</td>');
-                    items.push('<td class="text-center">'+(price*units)+'</td>');
+                    items.push('<td class="text-center">'+price+'</td>');
+                    items.push('<td class="text-center prodPrice">'+(price*units)+'</td>');
                     items.push('</tr>');
                     
                     $(items.join('')).insertAfter("#headerTableProducts");
@@ -291,15 +310,19 @@ function getOrdersDetails(sid){
         type: 'GET',
         success: function(result){
             
+            var date = new Date(result.buyDate*1000);
+            
+            var status = result.status;
+            
             //info of the order
             $("#did").val(result.id);
-            $("#dbuyDate").val(result.buyDate);
+            $("#dbuyDate").val(date);
             $("#dtotalPrice").val(result.totalPrice+" €");
-            $("#dstatus").val(result.status);
+            $("#dstatus").val(status);
             $("#uid").val(result.id);
-            $("#ubuyDate").val(result.buyDate);
+            $("#ubuyDate").val(date);
             $("#utotalPrice").val(result.totalPrice+" €");
-            $("#ustatus").val(result.status);
+            $("#ustatus").val(status);
             
             // Info of the client
             $("#ddni").val(result.client.dni);
@@ -316,13 +339,13 @@ function getOrdersDetails(sid){
             $.each(result.products, function(key, val){
                 
                 var price = parseFloat(val.price);
-                // var units = parseFloat(val.units);
+                var units = parseFloat(val.units);
                 var items = [];
                 items.push('<tr class="prodTableDetails">'); 
                 items.push('<td class="text-center">'+val.ref+'</td>');
                 items.push('<td class="text-center">'+val.brand+'</td>');
                 items.push('<td class="text-center">'+val.model+'</td>');
-                items.push('<td class="text-center">'+val.units+'</td>');
+                items.push('<td class="text-center">'+units+'</td>');
                 items.push('<td class="text-center">'+price+'</td>');
                 items.push('<td class="text-center">'+val.linePrice+'</td>');
                 items.push('</tr>');
@@ -369,8 +392,8 @@ function updateOrderStatus(){
         success: function(result){
                 
             $('#UpdateOrderState').modal('hide');
-            getBasicData();
             $.notify("Order Status Updated succesfully", "success");
+            getBasicData();
         },
         error: function(xhr,status,error) {
             console.log("Error at AJAX request");

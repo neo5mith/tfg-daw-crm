@@ -40,7 +40,7 @@ $type = "Orders";
                     <input class="form-control input-group-lg" type="text" name="ref" id="ref" tabindex="2" placeholder="Ref of the Product">
                     <label for="s2">Units:</label></br>
                     <input class="form-control" type="number" value="1" id="units" placeholder="Units" step="number"></input>
-                    <button type="button" id="buttonLoadProductData" class="btn btn-success" onclick="getProductDetails()">Add Product</button>
+                    <button type="button" id="buttonLoadProductData" class="btn btn-success" onclick="checkRefUnits()">Add Product</button>
                   </div>
                   </br>
                   </br>
@@ -75,7 +75,7 @@ $type = "Orders";
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" onclick="cleanModalInputs()">&times;</button>
                 <h4 class="modal-title">Order Details</h4>
               </div>
               <div class="modal-body">

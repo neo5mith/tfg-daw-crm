@@ -5,7 +5,7 @@ require_once(__DIR__.'/../model/db/ClientsDb.php');
 require_once(__DIR__.'/../model/db/ProductsDb.php');
 
 class OrderController{
-
+  
   /**
    * param $products Array with the id's of the products
    */
@@ -22,12 +22,6 @@ class OrderController{
     $pro = new ProductDb();
     
     $prodArray = array();
-    
-   // foreach($products as $p){
-    //  $prodInfo = $pro->generateDetails($p);
-    //  $testA = $prodInfo[0]->toArray();
-    //  array_push($prodArray, $testA);
-    //}
     
     $prods = count($products);
     for($i = 0 ; $i < $prods ; $i++){
