@@ -8,6 +8,8 @@ $type = "Dashboard";
     
 <?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
     
+    </br>
+    </br>
     <div class="row">
       
       <div class="col-md-4 col-sm-4 text-center">
@@ -31,7 +33,7 @@ $type = "Dashboard";
         
         <div class="col-md-12 col-sm-12 text-center">
           
-          <h2>Graphic goes here</h2>
+          <h2>Inner earnings by Client Order</h2>
           <div id="earnedMoney" class="col-md-12 col-sm-12"></div>
           
         </div>

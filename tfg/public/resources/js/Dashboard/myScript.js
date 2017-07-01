@@ -63,14 +63,13 @@ function graphic($orders){
         data.addRows(items);
     
         // Set chart options
-        var options = {'title':'Graphic about Orders',
+        var options = {
             'width':1000,
-            'height':400,
-            isStacked: true
+            'height':400
         };
     
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.BarChart(document.getElementById('earnedMoney'));
+        var chart = new google.visualization.ScatterChart(document.getElementById('earnedMoney'));
         chart.draw(data, options);
     }
 }
@@ -149,7 +148,7 @@ function getLastProducts(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered"><thead><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr></thead><tbody>');
+            items.push('<table class="table table-bordered"><thead><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price (€)</th></tr></thead><tbody>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.ref+'</td>');
@@ -177,7 +176,7 @@ function getProductsWarnStock(){
         type: 'GET',
         success: function(result){
             var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price</th></tr>');
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price (€)</th></tr>');
             $.each(result, function(key, value){
                 items.push('<tr>'); 
                 items.push('<td class="text-center">'+value.ref+'</td>');
