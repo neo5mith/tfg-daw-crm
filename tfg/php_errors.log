@@ -657,3 +657,122 @@ View in rendered output by enabling the "displayErrorDetails" setting.
 [01-Jul-2017 11:25:15 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
 [01-Jul-2017 11:25:15 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
 [01-Jul-2017 11:25:15 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:65-79}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 12:36:25 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:25 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:25 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:25 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:25 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:25 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:25 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:25 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:57 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:57 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:57 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:57 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 12:36:57 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 12:36:57 UTC] PHP Stack trace:
+[01-Jul-2017 12:36:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 12:36:57 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 13:53:48 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 13:53:48 UTC] PHP Stack trace:
+[01-Jul-2017 13:53:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 13:53:48 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 13:53:48 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 13:53:48 UTC] PHP Stack trace:
+[01-Jul-2017 13:53:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 13:53:48 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 13:53:49 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 13:53:49 UTC] PHP Stack trace:
+[01-Jul-2017 13:53:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 13:53:49 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 13:53:49 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 13:53:49 UTC] PHP Stack trace:
+[01-Jul-2017 13:53:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 13:53:49 UTC] PHP   2. require_once() /home/ubuntu/workspace/tfg/public/api.php:5
+[01-Jul-2017 14:04:15 UTC] PHP Fatal error:  Call to undefined method MongoDB\Driver\Cursor::limit() in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 43
+[01-Jul-2017 14:04:15 UTC] PHP Stack trace:
+[01-Jul-2017 14:04:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 14:04:15 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:408
+[01-Jul-2017 14:04:15 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 14:04:15 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 14:04:15 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:04:15 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 14:04:15 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 14:04:15 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:04:15 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 14:04:15 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:04:15 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:333-350}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:04:15 UTC] PHP  12. OrderController->getLastOrders() /home/ubuntu/workspace/tfg/public/api.php:337
+[01-Jul-2017 14:04:15 UTC] PHP  13. OrdersDb->getLastOrders() /home/ubuntu/workspace/tfg/lib/controller/OrderController.php:76
+[01-Jul-2017 14:04:54 UTC] PHP Fatal error:  Call to undefined method MongoDB\Driver\Cursor::limit() in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 14:04:54 UTC] PHP Stack trace:
+[01-Jul-2017 14:04:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 14:04:54 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:408
+[01-Jul-2017 14:04:54 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 14:04:54 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 14:04:54 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:04:54 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 14:04:54 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 14:04:54 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:04:54 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 14:04:54 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:04:54 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:333-350}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:04:54 UTC] PHP  12. OrderController->getLastOrders() /home/ubuntu/workspace/tfg/public/api.php:337
+[01-Jul-2017 14:04:54 UTC] PHP  13. OrdersDb->getLastOrders() /home/ubuntu/workspace/tfg/lib/controller/OrderController.php:76
+[01-Jul-2017 14:05:21 UTC] PHP Fatal error:  Call to undefined method MongoDB\Driver\Cursor::limit() in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 14:05:21 UTC] PHP Stack trace:
+[01-Jul-2017 14:05:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 14:05:21 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:408
+[01-Jul-2017 14:05:21 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 14:05:21 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 14:05:21 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:05:21 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 14:05:21 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 14:05:21 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:05:21 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 14:05:21 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:05:21 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:333-350}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:05:21 UTC] PHP  12. OrderController->getLastOrders() /home/ubuntu/workspace/tfg/public/api.php:337
+[01-Jul-2017 14:05:21 UTC] PHP  13. OrdersDb->getLastOrders() /home/ubuntu/workspace/tfg/lib/controller/OrderController.php:76
+[01-Jul-2017 14:05:25 UTC] PHP Fatal error:  Call to undefined method MongoDB\Driver\Cursor::limit() in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 14:05:25 UTC] PHP Stack trace:
+[01-Jul-2017 14:05:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 14:05:25 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:408
+[01-Jul-2017 14:05:25 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 14:05:25 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 14:05:25 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:05:25 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 14:05:25 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 14:05:25 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:05:25 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 14:05:25 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:05:25 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:333-350}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:05:25 UTC] PHP  12. OrderController->getLastOrders() /home/ubuntu/workspace/tfg/public/api.php:337
+[01-Jul-2017 14:05:25 UTC] PHP  13. OrdersDb->getLastOrders() /home/ubuntu/workspace/tfg/lib/controller/OrderController.php:76
+[01-Jul-2017 14:06:16 UTC] PHP Fatal error:  Call to undefined method MongoDB\Driver\Cursor::limit() in /home/ubuntu/workspace/tfg/lib/model/db/OrdersDb.php on line 42
+[01-Jul-2017 14:06:16 UTC] PHP Stack trace:
+[01-Jul-2017 14:06:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 14:06:16 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:408
+[01-Jul-2017 14:06:16 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 14:06:16 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 14:06:16 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:06:16 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 14:06:16 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 14:06:16 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 14:06:16 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 14:06:16 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:06:16 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:333-350}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 14:06:16 UTC] PHP  12. OrderController->getLastOrders() /home/ubuntu/workspace/tfg/public/api.php:337
+[01-Jul-2017 14:06:16 UTC] PHP  13. OrdersDb->getLastOrders() /home/ubuntu/workspace/tfg/lib/controller/OrderController.php:76

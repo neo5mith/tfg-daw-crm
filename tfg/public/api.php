@@ -329,8 +329,25 @@ $app->put('/orderStatusUpd', function($request, $response, array $args){
 
 //DASHBOARD-------------------
 
-//Get 10 last Orders
+//Get Reserved Orders
+$app->get('/dashboard/reservedOrders', function($request, $response, array $args){
+    
+    $cnt = new OrderController();
+    
+    $orders = $cnt->getReservedOrders();   //Get the return of all orders 
+    
+    $ordersA = array(); //Array for all orders
+    
+    foreach($orders as $ord){
+        array_push($ordersA, $ord->toArray());
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($ordersA));
 
+    return $response;
+});
 
 
 //Get last Clients

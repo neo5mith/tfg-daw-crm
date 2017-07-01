@@ -41,16 +41,16 @@ $type = "Dashboard";
       <!--Stock products under 50 units, and last orders-->
       <div class="col-md-12 col-sm-12 text-center">
         
-        <div class="col-md-6 col-sm-12 text-center">
+        <div class="col-md-12 col-sm-12 text-center">
           
           <h2>Products under 50 units !</h2>
           <div id="stockWarning" class="col-md-12"></div>
           
         </div>
         
-        <div class="col-md-6 col-sm-12 text-center">
+        <div class="col-md-12 col-sm-12 text-center">
           
-          <h2>Last 10 Orders</h2>
+          <h2>Reserved Orders</h2>
           <div id="lastOrders" class="col-md-12"></div>
           
         </div>

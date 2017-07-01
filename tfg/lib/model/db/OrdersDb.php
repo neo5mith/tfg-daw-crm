@@ -35,6 +35,17 @@ class OrdersDb{
 		}
 		return $return;
   }
+  
+  //Get the Reserved Orders for the Dashboard table
+  public function getReservedOrders(){
+    $this->openDatabaseConnection();
+		$res = $this->collection->find(["status" => "Reserved"]);
+		$return = [];
+		foreach($res as $row){
+		  array_push($return, new Order($row["_id"]->__toString(),$row["totalPrice"],$row["buyDate"],$row["status"],$row["client"],$row["products"]));
+		}
+		return $return;
+  }
 
   // public function deleteOrder($id){
   //   $this->openDatabaseConnection();

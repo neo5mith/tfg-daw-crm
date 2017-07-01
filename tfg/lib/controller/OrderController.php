@@ -70,6 +70,15 @@ class OrderController{
     
   }
   
+  public function getReservedOrders(){
+    
+    $ord = new OrdersDb();
+    $orders = $ord->getReservedOrders();
+    
+    return $orders;
+    
+  }
+  
   public function getDetails($id){
     
     $ord = new OrdersDb();
