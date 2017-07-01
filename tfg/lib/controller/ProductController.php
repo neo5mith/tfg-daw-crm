@@ -1,7 +1,14 @@
 <?php
+/**
+ *Controller for the Produc related functions
+ * @require ProductsDb.php
+ */
 
 require_once(__DIR__.'/../model/db/ProductsDb.php');
 
+/**
+ * Product Controller Class
+ */
 class ProductController{
 
   public function addProduct($ref, $brand, $model, $stock, $description, $dealer, $price, $dealerPrice){

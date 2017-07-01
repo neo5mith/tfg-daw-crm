@@ -2,7 +2,7 @@
 
 require_once(__DIR__.'/../Client.php');
 
-class ClientDb{
+class ClientsDb{
 
   public function createConnection(){
     $servername = "localhost";
@@ -149,14 +149,9 @@ class ClientDb{
     $sql = "SELECT id, dni, name, surname, address, city, country, phone, email FROM clients WHERE id=$id";
     $result = mysqli_query($conn, $sql);
 
-    //$arrayClients = array();
-
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        // output data of each row
         $cli = new Client($row["id"],$row["dni"],$row["name"],$row["surname"],$row["address"],$row["city"],$row["country"],$row["phone"],$row["email"]);
-        //array_push($arrayClients, $cli); #Inserir cada client al array
-        //$ret[0] = $arrayClients; #array amb els objectes, el posem al array de retorn
         $ret[0] = $cli;
         $ret[1] = 1; #Estat de l'operacio, completat
     } else {
@@ -180,8 +175,6 @@ class ClientDb{
         $row = mysqli_fetch_assoc($result);
         // output data of each row
         $cli = new Client($row["id"],$row["dni"],$row["name"],$row["surname"],$row["address"],$row["city"],$row["country"],$row["phone"],$row["email"]);
-        //array_push($arrayClients, $cli); #Inserir cada client al array
-        //$ret[0] = $arrayClients; #array amb els objectes, el posem al array de retorn
         $ret[0] = $cli;
         $ret[1] = 1; #Estat de l'operacio, completat
     } else {

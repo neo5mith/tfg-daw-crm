@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__.'/../../vendor/autoload.php');
 require_once(__DIR__.'/../lib/controller/ClientController.php');
-require_once(__DIR__.'/../lib/controller/DashboardController.php');
+// require_once(__DIR__.'/../lib/controller/DashboardController.php');
 require_once(__DIR__.'/../lib/controller/OrderController.php');
 require_once(__DIR__.'/../lib/controller/ProductController.php');
 
