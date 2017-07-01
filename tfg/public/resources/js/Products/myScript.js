@@ -267,8 +267,8 @@ function getProductDetails(sid){
             $("#istock").val(result.stock);
             $("#idescription").val(result.description);
             $("#idealer").val(result.dealer);
-            $("#iprice").val(result.price);
-            $("#idealerPrice").val(result.dealerPrice);
+            $("#iprice").val(result.price+" €");
+            $("#idealerPrice").val(result.dealerPrice+" €");
         },
         error: function(ts){
             console.log(ts.responseText);

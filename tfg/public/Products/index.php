@@ -75,16 +75,11 @@ $type = "Products";
                     <input class="form-control" type="number" id="dealerPrice" name="dealerprice" tabindex="8" step="0.01">
                   </div>
                   </br>
-                  <form action="upload.php" method="post" enctype="multipart/form-data">
-                    <h3>Select image to upload:</h3>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <button class="btn btn-success" type="submit" name="submit">Upload</button>
-                  </form>
-                  <!--<div class="form-group">-->
-                  <!--  <label for="s7">Photo:</label>-->
-                  <!--  <input class="form-control" type="text" name="photo" tabindex="9">-->
-                  <!--</div>-->
-                  <!--</br>-->
+                  <!--<form action="upload.php" method="post" enctype="multipart/form-data">-->
+                  <!--  <h3>Select image to upload:</h3>-->
+                  <!--  <input type="file" name="fileToUpload" id="fileToUpload">-->
+                  <!--  <button class="btn btn-success" type="submit" name="submit">Upload</button>-->
+                  <!--</form>-->
                 </form>
               </div>
               <div class="modal-footer">

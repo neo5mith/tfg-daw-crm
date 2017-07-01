@@ -138,6 +138,25 @@ class ProductDb{
     return true;
 
   }
+  
+  public function updateStock($idI, $stockI){
+    $conn = $this->createConnection();
+
+    // prepare and bind
+    $stmt = $conn->prepare("UPDATE products set stock=? WHERE id=?");
+    $stmt->bind_param("ii", $stock, $id);
+
+    // set parameters and execute
+    $stock = $stockI;
+    $id = $idI;
+    $stmt->execute();
+
+    $stmt->close();
+    $conn->close();
+
+    return true;
+
+  }
 
   public function deleteProduct($idI){
     $conn = $this->createConnection();

@@ -237,6 +237,20 @@ $app->put('/productUpdate', function($request, $response, array $args){
     return $response;
 });
 
+// Update Product Stock
+$app->put('/productStockUpdate', function($request, $response, array $args){
+    $data = $request->getParsedBody();
+    
+    $cnt = new ProductController();
+    $cnt->updateProduct($data['id'], $data['stock']);
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($data));
+
+    return $response;
+});
+
 
 //Upload Image for product (IN PROCESS_________________________)
 
@@ -314,6 +328,10 @@ $app->put('/orderStatusUpd', function($request, $response, array $args){
 
 
 //DASHBOARD-------------------
+
+//Get 10 last Orders
+
+
 
 //Get last Clients
 $app->get('/dashboard/lastClients', function($request, $response, array $args){

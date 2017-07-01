@@ -125,12 +125,14 @@ function createOrder(){
             $.notify("Order added", "success");
             getBasicData();
             $('#CreateOrder').modal('hide');
+            discountStock(products);
         },
         error : function(){
             $.notify("Sorry, but something went wrong. Please try again.", "error");
         }
     });
 }
+
 
 //Clean modal form if Cancel is clicked
 function cleanModalInputs(){

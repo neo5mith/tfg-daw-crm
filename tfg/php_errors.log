@@ -628,3 +628,32 @@ View in rendered output by enabling the "displayErrorDetails" setting.
 [30-Jun-2017 16:43:59 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
 [30-Jun-2017 16:43:59 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
 [30-Jun-2017 16:43:59 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:65-79}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 10:13:15 UTC] PHP Warning:  log() expects parameter 1 to be double, string given in /home/ubuntu/workspace/tfg/lib/model/db/ClientsDb.php on line 91
+[01-Jul-2017 10:13:15 UTC] PHP Stack trace:
+[01-Jul-2017 10:13:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 10:13:15 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:373
+[01-Jul-2017 10:13:15 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 10:13:15 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 10:13:15 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 10:13:15 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 10:13:15 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 10:13:15 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 10:13:15 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 10:13:15 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 10:13:15 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:83-94}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 10:13:15 UTC] PHP  12. ClientController->addClient() /home/ubuntu/workspace/tfg/public/api.php:87
+[01-Jul-2017 10:13:15 UTC] PHP  13. ClientDb->createClient() /home/ubuntu/workspace/tfg/lib/controller/ClientController.php:10
+[01-Jul-2017 10:13:15 UTC] PHP  14. log() /home/ubuntu/workspace/tfg/lib/model/db/ClientsDb.php:91
+[01-Jul-2017 11:25:15 UTC] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/ubuntu/workspace/tfg/public/api.php on line 70
+[01-Jul-2017 11:25:15 UTC] PHP Stack trace:
+[01-Jul-2017 11:25:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/tfg/public/api.php:0
+[01-Jul-2017 11:25:15 UTC] PHP   2. Slim\App->run() /home/ubuntu/workspace/tfg/public/api.php:391
+[01-Jul-2017 11:25:15 UTC] PHP   3. Slim\App->process() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:295
+[01-Jul-2017 11:25:15 UTC] PHP   4. Slim\App->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:370
+[01-Jul-2017 11:25:15 UTC] PHP   5. Slim\App->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 11:25:15 UTC] PHP   6. Slim\Route->run() /home/ubuntu/workspace/vendor/slim/slim/Slim/App.php:476
+[01-Jul-2017 11:25:15 UTC] PHP   7. Slim\Route->callMiddlewareStack() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:316
+[01-Jul-2017 11:25:15 UTC] PHP   8. Slim\Route->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:122
+[01-Jul-2017 11:25:15 UTC] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /home/ubuntu/workspace/vendor/slim/slim/Slim/Route.php:344
+[01-Jul-2017 11:25:15 UTC] PHP  10. call_user_func:{/home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[01-Jul-2017 11:25:15 UTC] PHP  11. Closure->{closure:/home/ubuntu/workspace/tfg/public/api.php:65-79}() /home/ubuntu/workspace/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41

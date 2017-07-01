@@ -44,6 +44,18 @@ class OrderController{
     
     $stat = $ord->insertOrder($data);
     
+    
+    $product;
+    //Update the stock of the products
+    foreach ($prodArray as $product){
+      $un = $product['units'];
+      $currStock = $product['stock'];
+      $newStock = $currStock - $un;
+      $ProId = $product['id'];
+      $pro->updateStock($ProId, $newStock);
+    }
+    
+    
     //If stat is 1, it's been completed
     return $stat;
 

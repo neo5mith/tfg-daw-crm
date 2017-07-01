@@ -10,16 +10,6 @@ $type = "Dashboard";
     
     <div class="row">
       
-      <!--Proves-->
-      <div class="col-md-12 text-center">
-        <a href="proves.php" class="btn-lg btn-primary" role="button">PROVES!</a>
-      </div>
-      
-      </br>
-      </br>
-      </br>
-      <!--Fins aqui proves-->
-      
       <div class="col-md-4 col-sm-4 text-center">
         <a href="/Clients" class="btn-lg btn-primary " role="button">Clients</a>
       </div>
@@ -37,7 +27,14 @@ $type = "Dashboard";
     <div class="row">
       
       <!--Graphic about earned Money-->
-      <div id="earnedMoney" class="col-md-12 col-sm-12">
+      <div class="col-md-12 col-sm-12">
+        
+        <div class="col-md-12 col-sm-12 text-center">
+          
+          <h2>Graphic goes here</h2>
+          <div id="earnedMoney" class="col-md-12 col-sm-12"></div>
+          
+        </div>
         
       </div>
       

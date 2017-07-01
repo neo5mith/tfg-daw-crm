@@ -65,6 +65,15 @@ class ProductController{
     
   }
   
+  // public function updateProductStock($id,$stock){
+    
+  //   $prod = new ProductDb();
+  //   $ret = $prod->updateStock($id, $stock);
+    
+  //   return $ret;
+    
+  // }
+  
   public function alarmStock(){
     
     $prod = new ProductDb();
