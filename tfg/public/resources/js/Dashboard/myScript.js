@@ -3,31 +3,32 @@
 
 
 //When window loaded, execute that function
-window.onload = getInfoGraph();
+window.onload = getInfoGraphPayed();
+window.onload = getInfoGraphReserved();
+window.onload = getProductsWarnStock();
 window.onload = getReservedOrders();
 window.onload = getLastClients();
 window.onload = getLastProducts();
-window.onload = getProductsWarnStock();
 
-function getInfoGraph(){
-//Ask for Orders info
+
+//Ask for Payed Orders info
+function getInfoGraphPayed(){
+
     $.ajax({
-        url: 'https://tfg-sergi-daw-neosmith.c9users.io/orders',
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/dashboard/payedOrders',
         type: 'GET',
         success: function(result){
-            graphic(result);
+            graphicPayed(result);
         },
         error: function(xhr, ajaxOptions, thrownError){
             console.log("getBasicData, error");
-            // console.log(xhr.status);
-            // console.log(thrownError);
         }
     });
 }
 
 
 //Graphic from orders
-function graphic($orders){
+function graphicPayed($orders){
     
     // Load the Visualization API and the corechart package.
     google.charts.load('current', {'packages':['corechart']});
@@ -42,15 +43,8 @@ function graphic($orders){
     
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Date');
-        data.addColumn('number', 'Money Spent');
-        // data.addRows([ 
-        //   ['Meizu', 3],
-        //   ['Nexus', 1],
-        //   ['Apple', 1],
-        //   ['Hp', 1],
-        //   ['Huawei', 2]
-        // ]);
+        data.addColumn('string', 'Client');
+        data.addColumn('number', 'Money Spent €');
         
         var items = [];
         $.each($orders, function(key, value){
@@ -64,14 +58,104 @@ function graphic($orders){
     
         // Set chart options
         var options = {
-            'width':1000,
+            'width':600,
             'height':400
         };
     
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.ScatterChart(document.getElementById('earnedMoney'));
+        // var chart = new google.visualization.ScatterChart(document.getElementById('earnedMoney'));
+        var chart = new google.visualization.PieChart(document.getElementById('earnedMoney'));
+        // var chart = new google.visualization.BarChart(document.getElementById('earnedMoney'));
         chart.draw(data, options);
     }
+}
+
+
+//Ask for Payed Orders info
+function getInfoGraphReserved(){
+
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/dashboard/reservedOrders',
+        type: 'GET',
+        success: function(result){
+            graphicReserved(result);
+        },
+        error: function(xhr, ajaxOptions, thrownError){
+            console.log("getBasicData, error");
+        }
+    });
+}
+
+
+//Graphic from orders
+function graphicReserved($orders){
+    
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+    
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Client');
+        data.addColumn('number', 'Money Spent €');
+        
+        var items = [];
+        $.each($orders, function(key, value){
+            var item = [];
+            item.push(value.client.surname);
+            item.push(Math.round(value.totalPrice));
+            items.push(item);
+        });
+        
+        data.addRows(items);
+    
+        // Set chart options
+        var options = {
+            'width':550,
+            'height':400
+        };
+    
+        // Instantiate and draw our chart, passing in some options.
+        // var chart = new google.visualization.PieChart(document.getElementById('pendingMoney'));
+        var chart = new google.visualization.BarChart(document.getElementById('pendingMoney'));
+        chart.draw(data, options);
+    }
+}
+
+
+// Get Stock Warnings
+function getProductsWarnStock(){
+    $.ajax({
+        url: 'https://tfg-sergi-daw-neosmith.c9users.io/dashboard/StockWarning',
+        type: 'GET',
+        success: function(result){
+            var items = [];
+            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price (€)</th></tr>');
+            $.each(result, function(key, value){
+                items.push('<tr>'); 
+                items.push('<td class="text-center">'+value.ref+'</td>');
+                items.push('<td class="text-center">'+value.brand+'</td>');
+                items.push('<td class="text-center">'+value.model+'</td>');
+                items.push('<td class="text-center">'+value.stock+'</td>');
+                items.push('<td class="text-center">'+value.price+'</td>');
+                items.push('</tr>');
+            });
+            items.push('</table>');
+            $('#stockWarning').html(items.join(''));
+        },
+        error: function(){
+            var items = [];
+            items.push('<h2 class="text-center">There are no Products under 50 units or there is an error with the DB right now.</h2>');
+            $('#stockWarning').html(items.join(''));
+        }
+    });
 }
 
 
@@ -141,6 +225,7 @@ function getLastClients(){
     });
 }
 
+
 // Get 10 last Products
 function getLastProducts(){
     $.ajax({
@@ -165,34 +250,6 @@ function getLastProducts(){
             var items = [];
             items.push('<h2 class="text-center">There are no products yet or there is an error with the DB right now.</h2>');
             $('#lastProducts').html(items.join(''));
-        }
-    });
-}
-
-// Get 10 last Products
-function getProductsWarnStock(){
-    $.ajax({
-        url: 'https://tfg-sergi-daw-neosmith.c9users.io/dashboard/StockWarning',
-        type: 'GET',
-        success: function(result){
-            var items = [];
-            items.push('<table class="table table-bordered"><tr><th class="text-center">Ref</th><th class="text-center">Brand</th><th class="text-center">Model</th><th class="text-center">Stock</th><th class="text-center">Price (€)</th></tr>');
-            $.each(result, function(key, value){
-                items.push('<tr>'); 
-                items.push('<td class="text-center">'+value.ref+'</td>');
-                items.push('<td class="text-center">'+value.brand+'</td>');
-                items.push('<td class="text-center">'+value.model+'</td>');
-                items.push('<td class="text-center">'+value.stock+'</td>');
-                items.push('<td class="text-center">'+value.price+'</td>');
-                items.push('</tr>');
-            });
-            items.push('</table>');
-            $('#stockWarning').html(items.join(''));
-        },
-        error: function(){
-            var items = [];
-            items.push('<h2 class="text-center">There are no Products under 50 units or there is an error with the DB right now.</h2>');
-            $('#stockWarning').html(items.join(''));
         }
     });
 }

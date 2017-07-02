@@ -6,7 +6,7 @@
 
             <div class="row text-center">
                 
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-12 col-sm-12 jumbotron">
                     <footer>
                         <p>Created and Developed by: <strong>Sergi Bartual Pajuelo</strong></p>
                         <p>This is the End Project of Associate Degree for EUG Gimbernat</p>

@@ -1,14 +1,13 @@
 <?php
 require_once(__DIR__.'/../../vendor/autoload.php');
 require_once(__DIR__.'/../lib/controller/ClientController.php');
-// require_once(__DIR__.'/../lib/controller/DashboardController.php');
 require_once(__DIR__.'/../lib/controller/OrderController.php');
 require_once(__DIR__.'/../lib/controller/ProductController.php');
 
 $app = new \Slim\App();
 
 
-//CLIENTS--------------------
+//CLIENTS-----------------------------------------------------------------------
 
 //Get all clients
 $app->get('/clients', function($request, $response, array $args){
@@ -26,6 +25,7 @@ $app->get('/clients', function($request, $response, array $args){
 
     return $response;
 });
+
 
 //Get all clients DNI to JSON, used to look for autocomplete
 $app->get('/clientsdni', function($request, $response, array $args){
@@ -123,7 +123,7 @@ $app->put('/clientUpdate', function($request, $response, array $args){
 });
 
 
-//PRODUCTS--------------------
+//PRODUCTS----------------------------------------------------------------------
 
 //Get all products
 $app->get('/products', function($request, $response, array $args){
@@ -237,6 +237,7 @@ $app->put('/productUpdate', function($request, $response, array $args){
     return $response;
 });
 
+
 // Update Product Stock
 $app->put('/productStockUpdate', function($request, $response, array $args){
     $data = $request->getParsedBody();
@@ -252,11 +253,7 @@ $app->put('/productStockUpdate', function($request, $response, array $args){
 });
 
 
-//Upload Image for product (IN PROCESS_________________________)
-
-
-
-//ORDERS----------------------
+//ORDERS------------------------------------------------------------------------
 
 //Get all orders
 $app->get('/orders', function($request, $response, array $args){
@@ -327,7 +324,7 @@ $app->put('/orderStatusUpd', function($request, $response, array $args){
 });
 
 
-//DASHBOARD-------------------
+//DASHBOARD---------------------------------------------------------------------
 
 //Get Reserved Orders
 $app->get('/dashboard/reservedOrders', function($request, $response, array $args){
@@ -335,6 +332,27 @@ $app->get('/dashboard/reservedOrders', function($request, $response, array $args
     $cnt = new OrderController();
     
     $orders = $cnt->getReservedOrders();   //Get the return of all orders 
+    
+    $ordersA = array(); //Array for all orders
+    
+    foreach($orders as $ord){
+        array_push($ordersA, $ord->toArray());
+    }
+    
+    $response = $response->withHeader('Content-type', 'application/json');
+    $body = $response->getBody();
+    $body->write(json_encode($ordersA));
+
+    return $response;
+});
+
+
+//Get Payed Orders
+$app->get('/dashboard/payedOrders', function($request, $response, array $args){
+    
+    $cnt = new OrderController();
+    
+    $orders = $cnt->getPayedOrders();   //Get the return of all orders 
     
     $ordersA = array(); //Array for all orders
     

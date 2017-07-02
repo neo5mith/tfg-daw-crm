@@ -77,6 +77,20 @@ class OrdersDb{
   }
   
   /**
+   * Get the Orders which status is "Payed"
+   * @return Array with Order objects
+   */
+  public function getPayedOrders(){
+    $this->openDatabaseConnection();
+		$res = $this->collection->find(["status" => "Payed"]);
+		$return = [];
+		foreach($res as $row){
+		  array_push($return, new Order($row["_id"]->__toString(),$row["totalPrice"],$row["buyDate"],$row["status"],$row["client"],$row["products"]));
+		}
+		return $return;
+  }
+  
+  /**
    * Delete an order, given it's ID
    * return int - 1 when done
    * NOT NEEDED, ORDERS MUST BE ALWAYS

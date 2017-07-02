@@ -98,6 +98,19 @@ class OrderController{
   }
   
   /**
+   * Get the orders with state equals to "Payed"
+   * @orders Array of the orders with payed status
+   */
+  public function getPayedOrders(){
+    
+    $ord = new OrdersDb();
+    $orders = $ord->getPayedOrders();
+    
+    return $orders;
+    
+  }
+  
+  /**
    * Get the details of an Specific Order, considering the ID
    * @id int
    * @details Object Order of the given ID

@@ -31,10 +31,17 @@ $type = "Dashboard";
       <!--Graphic about earned Money-->
       <div class="col-md-12 col-sm-12">
         
-        <div class="col-md-12 col-sm-12 text-center">
+        <div class="col-md-6 col-sm-12 text-center">
           
           <h2>Inner earnings by Client Order</h2>
           <div id="earnedMoney" class="col-md-12 col-sm-12"></div>
+          
+        </div>
+        
+        <div class="col-md-6 col-sm-12 text-center">
+          
+          <h2>Pending earnings from Reserved Orders</h2>
+          <div id="pendingMoney" class="col-md-12 col-sm-12"></div>
           
         </div>
         
