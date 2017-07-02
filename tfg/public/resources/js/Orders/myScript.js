@@ -5,6 +5,11 @@
 window.onload = getBasicData();
 
 
+function loadAll(){
+    window.onload = getBasicData();
+}
+
+
 //Get all the Orders, and put them into a table
 function getBasicData(){
     // console.log("Entrem a getBasicData");

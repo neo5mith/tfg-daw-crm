@@ -10,6 +10,15 @@ window.onload = getReservedOrders();
 window.onload = getLastClients();
 window.onload = getLastProducts();
 
+function loadAll(){
+    window.onload = getInfoGraphPayed();
+    window.onload = getInfoGraphReserved();
+    window.onload = getProductsWarnStock();
+    window.onload = getReservedOrders();
+    window.onload = getLastClients();
+    window.onload = getLastProducts();
+}
+
 
 //Ask for Payed Orders info
 function getInfoGraphPayed(){
@@ -104,7 +113,7 @@ function graphicReserved($orders){
         // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Client');
-        data.addColumn('number', 'Money Spent €');
+        data.addColumn('number', 'Pending Money €');
         
         var items = [];
         $.each($orders, function(key, value){
@@ -118,6 +127,12 @@ function graphicReserved($orders){
     
         // Set chart options
         var options = {
+            hAxis: {
+              title: 'Euros €'
+            },
+            vAxis: {
+              title: 'Clients'
+            },
             'width':550,
             'height':400
         };

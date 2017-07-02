@@ -6,6 +6,11 @@
 window.onload = getBasicData();
 
 
+function loadAll(){
+    window.onload = getBasicData();
+}
+
+
 // Getting basic information from the project and put it into a table
 function getBasicData(){
     $.ajax({

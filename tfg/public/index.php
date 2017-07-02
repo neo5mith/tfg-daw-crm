@@ -8,8 +8,16 @@ $type = "Dashboard";
     
 <?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
     
-    </br>
-    </br>
+    <!--Reload all button-->
+    <div class="row">
+                
+      <div class="col-md-offset-11 col-md-1">
+        <a class="btn-sm btn-success " role="button" onclick="loadAll()">R</a>
+      </div>
+        
+    </div>
+    
+    <!--Buttons for diferent section-->
     <div class="row">
       
       <div class="col-md-4 col-sm-4 text-center">
@@ -26,18 +34,23 @@ $type = "Dashboard";
       
     </div>
     
+    </br>
+    
+    <!--Dashboard info-->
     <div class="row">
       
-      <!--Graphic about earned Money-->
+      <!--Grpahics-->
       <div class="col-md-12 col-sm-12">
         
+        <!--Orders with payed status-->
         <div class="col-md-6 col-sm-12 text-center">
           
-          <h2>Inner earnings by Client Order</h2>
+          <h2>Inner earnings by Payed Client Orders</h2>
           <div id="earnedMoney" class="col-md-12 col-sm-12"></div>
           
         </div>
         
+        <!--Orders with reserved status-->
         <div class="col-md-6 col-sm-12 text-center">
           
           <h2>Pending earnings from Reserved Orders</h2>

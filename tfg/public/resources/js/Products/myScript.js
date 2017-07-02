@@ -4,28 +4,11 @@
 
 //When window loaded, execute that function
 window.onload = getBasicData();
-// window.onload = autocompleteBrands();
 
 
-// // Autocomplete Brands
-// function autocompleteBrands(){
-//     var options = {
-    
-//         url: "resources/brands.json",
-        
-//         getValue: "name",
-        
-//         list: {	
-//             match: {
-//               enabled: true
-//             }
-//         },
-        
-//         theme: "square"
-//     };
-    
-//     $("#brands").easyAutocomplete(options);
-// }
+function loadAll(){
+    window.onload = getBasicData();
+}
 
 
 // Getting basic information from the project and put it into a table
@@ -141,6 +124,7 @@ $(document).on("click", "[data-delete-product]", function(evt) {
 });
 
 
+//Sure of delete
 $(document).on("click", "[data-deleteSure-product]", function(evt) {
     var id = $(this).data("deleteSure-product");
     
@@ -165,6 +149,7 @@ function deleteProduct(sid){
     });
 }
 
+
 //When update buton clicked, take the id of the product and show modal of update, call the func to get details
 $(document).on("click", "[data-update-product]", function(evt) {
     evt.preventDefault();
@@ -174,6 +159,7 @@ $(document).on("click", "[data-update-product]", function(evt) {
 
     getProductDetailsEdit(id);
 });
+
 
 // Get Details of the Product and insert them into the modal of update product
 function getProductDetailsEdit(sid){
