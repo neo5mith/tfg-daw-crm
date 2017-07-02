@@ -140,18 +140,31 @@ fullfill all the prefixes
 
 
 https://c9.io
+
 http://releases.ubuntu.com/trusty/
+
 https://www.apache.org/
+
 http://php.net/
+
 https://www.mysql.com/
+
 https://www.mongodb.com/
+
 https://community.c9.io/t/setting-up-mysql/1718
+
 https://community.c9.io/t/setting-up-mongodb/1717
+
 https://getcomposer.org/
+
 https://www.slimframework.com/
+
 https://jquery.com/
+
 http://easyautocomplete.com/
+
 https://developers.google.com/
+
 https://developers.google.com/chart/
 
 
