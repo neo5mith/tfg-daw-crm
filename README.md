@@ -1,3 +1,7 @@
+#Divisions of this document:#
+
+
+
 #What is Neosmith CRM?
 
 
@@ -44,7 +48,6 @@ Into this section, we will find a group of useful information that will allow
 us to manage in a stroke of eye our Clients, Products, and Orders.
 For example, we will be able, to see, the Products that are under a "low" stock,
 see the "Reserved" orders, or visualize the earnings by each Client.
-
 
 
 #How it's made Neosmith CRM?
