@@ -113,6 +113,13 @@ needing more pages to access to (modals also helped into this effect).
 
 A common use that you'll see into the code is the inclusion of:
 
+
+```
+#!php
+
+<?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
+```
+
 <?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
 
 and
