@@ -5,13 +5,13 @@ What is Neosmith CRM?
 
 2. Functions
 
-* Clients
+ * Clients
 
-* Products
+ * Products
 
-* Orders
+ * Orders
 
-* Dashboard
+ * Dashboard
 
 How it's made Neosmith CRM?
 
