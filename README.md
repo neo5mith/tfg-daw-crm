@@ -187,6 +187,9 @@ sergibartual@gmail.com
 
 
 Escoles Universitàries Gimbernat.
-Google search engine.
+
 My tireless tutor of the project, and professor Xavi Sarda.
+
+Google search engine.
+
 All the people that have put up with me while doing this project.
