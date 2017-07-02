@@ -122,6 +122,20 @@ own purpose.
 #Improvements
 
 
+As a new growing WebApp, constant changes are done, and lot's of improvements
+can be made. Here are some ones I came up with for future implementations.
+
+·Check that all fields are filled, and also with the right type of of data.
+·Upload Product images, and be able to manipulate them on the go.
+·Control and show all the possible errors (testers needed)
+·Sort the tables by columns
+·Pagination of the tables, in order to prevent long scrolls
+·Search bar for the table information
+·When a phone number is inserted into a Client, based on the city, and country
+fullfill all the prefixes
+·Generate a PDF from the orders
+
+
 #References
 
 
@@ -139,3 +153,20 @@ https://jquery.com/
 http://easyautocomplete.com/
 https://developers.google.com/
 https://developers.google.com/chart/
+
+
+#Contact
+
+
+For further information, improvements or whatever concerning to this, send me an email to:
+
+sergibartual@gmail.com
+
+
+#Speciall thanks to
+
+
+Escoles Universitàries Gimbernat.
+Google search engine.
+My tireless tutor of the project, and professor Xavi Sarda.
+All the people that have put up with me while doing this project.
