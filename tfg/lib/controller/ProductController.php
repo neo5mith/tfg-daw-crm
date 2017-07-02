@@ -10,7 +10,19 @@ require_once(__DIR__.'/../model/db/ProductsDb.php');
  * Product Controller Class
  */
 class ProductController{
-
+  
+  /**
+   * Given the info of the Product, this Product data will be inserted and created into the DDBB
+   * @ref int
+   * @brand string
+   * @model string
+   * @stock int
+   * @description string
+   * @dealer string
+   * @price float
+   * @dealerPrice float
+   * @stat boolean - True if correct
+   */
   public function addProduct($ref, $brand, $model, $stock, $description, $dealer, $price, $dealerPrice){
 
     $prod = new ProductDb();
@@ -19,8 +31,13 @@ class ProductController{
     return $stat;
 
   }
-
+  
+  /**
+   * Get all the Products from the DDBB
+   * @products array of Product objects
+   */
   public function getProducts(){
+    
     $prod = new ProductDb();
     $products = $prod->getDb();
     
@@ -28,7 +45,10 @@ class ProductController{
     
   }
   
-  //Get the 10 last Products
+  /**
+   * Get the 10 last Products
+   * @products array with Product Objects
+   */
   public function getLastProducts(){
     
     $pro = new ProductDb();
@@ -38,6 +58,11 @@ class ProductController{
     
   }
   
+  /**
+   * Get the details of a concrete Product, given by the ID
+   * @id int
+   * @details Product object with the details of the Product chosen
+   */
   public function getDetails($id){
     
     $prod = new ProductDb();
@@ -47,6 +72,11 @@ class ProductController{
     
   }
   
+  /**
+   * Get the details of a Product, by the reference of it
+   * @ref int
+   * @details Product object with the details of it
+   */
   public function getDetailsByRef($ref){
     
     $prod = new ProductDb();
@@ -56,6 +86,10 @@ class ProductController{
     
   }
   
+  /**
+   * Delete a Product based on it's ID
+   * @id int
+   */
   public function deleteProduct($id){
     
     $prod = new ProductDb();
@@ -63,6 +97,19 @@ class ProductController{
     
   }
   
+  /**
+   * Update the Product information with the new data passed
+   * @id int
+   * @ref int
+   * @brand string
+   * @model string
+   * @stock int
+   * @description string
+   * @dealer string
+   * @price float
+   * @dealerPrice float
+   * @ret boolean - True if complete
+   */
   public function updateProduct($id,$ref,$brand,$model,$stock,$description, $dealer, $price, $dealerPrice){
     
     $prod = new ProductDb();
@@ -72,15 +119,10 @@ class ProductController{
     
   }
   
-  // public function updateProductStock($id,$stock){
-    
-  //   $prod = new ProductDb();
-  //   $ret = $prod->updateStock($id, $stock);
-    
-  //   return $ret;
-    
-  // }
-  
+  /**
+   * Get all the Products which it's stock is 50 or lower
+   * @ret Array with Product objects
+   */
   public function alarmStock(){
     
     $prod = new ProductDb();
@@ -89,5 +131,4 @@ class ProductController{
     return $ret;
     
   }
-  
 }

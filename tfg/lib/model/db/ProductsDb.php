@@ -1,9 +1,20 @@
 <?php
+/**
+ *Model for the Product DDBB functions
+ * @require Product.php
+ */
 
 require_once(__DIR__.'/../Product.php');
 
+/**
+ * Products DB Model Class
+ */
 class ProductDb{
-
+  
+  /**
+   * Method where the connection to the MYSQL DDBB is created
+   * @conn returns the open connection to the DDBB
+   */
   public function createConnection(){
     $serverbrand = "localhost";
     $userbrand = "usuari";
@@ -20,22 +31,16 @@ class ProductDb{
     return $conn;
   }
   
-  
+  /**
+   * Get all the Products from the DDBB
+   * @ret array of Products objects
+   */
   public function getDb(){
     $conn = $this->createConnection();
 
-    // var_dump(mysqli_error($conn));
-    // die;
-    
     $ret[0] = null;
     $sql = "SELECT id, ref, brand, model, stock, description, dealer, price, dealerprice FROM products ORDER BY id";
     $result = mysqli_query($conn, $sql);
-    
-    // var_dump(mysqli_error($sql));
-    // die;
-    
-    // var_dump($result);
-    // die;
 
     $arrayProducts = array();
 
@@ -55,22 +60,17 @@ class ProductDb{
     return $ret;
   }
   
+  /**
+   * Get the last 10 Products of the DDBB
+   * @ret Array with Product objects
+   */
   public function getDbLast(){
     $conn = $this->createConnection();
 
-    // var_dump(mysqli_error($conn));
-    // die;
-    
     $ret[0] = null;
     $sql = "SELECT id, ref, brand, model, stock, description, dealer, price, dealerprice FROM products ORDER BY id DESC LIMIT 10";
     $result = mysqli_query($conn, $sql);
     
-    // var_dump(mysqli_error($sql));
-    // die;
-    
-    // var_dump($result);
-    // die;
-
     $arrayProducts = array();
 
     if (mysqli_num_rows($result) > 0) {
@@ -88,7 +88,19 @@ class ProductDb{
     mysqli_close($conn);
     return $ret;
   }
-
+  
+  /**
+   * Function to create a Product
+   * @refI int
+   * @brandI string
+   * @modelI string
+   * @stockI int
+   * @descriptionI string
+   * @dealerI string
+   * @priceI float
+   * @dealerPriceI float
+   * return boolean - true for completed
+   */
   public function createProduct($refI, $brandI, $modelI, $stockI, $descriptionI, $dealerI, $priceI, $dealerpriceI){
     $conn = $this->createConnection();
     
@@ -113,6 +125,19 @@ class ProductDb{
     return true;
   }
 
+  /**
+   * Update the Product information with the new data passed
+   * @idI int
+   * @refI int
+   * @brandI string
+   * @modelI string
+   * @stockI int
+   * @descriptionI string
+   * @dealerI string
+   * @priceI float
+   * @dealerPriceI float
+   * return boolean - True if complete
+   */
   public function updateProduct($idI, $refI, $brandI, $modelI, $stockI, $descriptionI, $dealerI, $priceI, $dealerpriceI){
     $conn = $this->createConnection();
 
@@ -136,9 +161,14 @@ class ProductDb{
     $conn->close();
 
     return true;
-
   }
   
+  /**
+   * Update the stock of a Product, given the ID and the stock
+   * @idI int
+   * @stockI int
+   * return boolean - True for complete
+   */
   public function updateStock($idI, $stockI){
     $conn = $this->createConnection();
 
@@ -155,9 +185,13 @@ class ProductDb{
     $conn->close();
 
     return true;
-
   }
-
+  
+  /**
+   * Delete a Product by it's ID
+   * @idI int
+   * return boolean - True for done
+   */
   public function deleteProduct($idI){
     $conn = $this->createConnection();
 
@@ -175,6 +209,11 @@ class ProductDb{
     return true;
   }
 
+  /**
+   * Generate the details of a Product by ID
+   * @id int
+   * @ret Array with object Product, and state of the operation, 1 for complete
+   */
   public function generateDetails($id){
 
     $conn = $this->createConnection();
@@ -186,24 +225,26 @@ class ProductDb{
     if ($result->num_rows == 1) {
         $row = mysqli_fetch_assoc($result);
         
-        // output data of each row
         $prod = new Product($row["id"],$row["ref"],$row["brand"],$row["model"],
             $row["stock"],$row["description"],$row["dealer"],$row["price"],
             $row["dealerprice"]);
             
-        //array_push($arrayProducts, $prod); #Inserir cada product al array
-        //$ret[0] = $arrayProducts; #array amb els objectes, el posem al array de retorn
         $ret[0] = $prod;
         $ret[1] = 1; #Estat de l'operacio, completat
     } else {
         $ret[1] = 0; #Estat de l'operacio, array buit
     }
-        
+    
     mysqli_close($conn);
     return $ret;
 
   }
   
+  /**
+   * Generate the details of a Product by REF
+   * @id int
+   * @ret Array with object Product, and state of the operation, 1 for complete
+   */
   public function generateDetailsByRef($ref){
 
     $conn = $this->createConnection();
@@ -215,9 +256,10 @@ class ProductDb{
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         // output data of each row
-        $prod = new Product($row["id"],$row["ref"],$row["brand"],$row["model"],$row["stock"],$row["description"],$row["dealer"],$row["price"],$row["dealerprice"]);
-        //array_push($arrayProducts, $prod); #Inserir cada product al array
-        //$ret[0] = $arrayProducts; #array amb els objectes, el posem al array de retorn
+        $prod = new Product($row["id"],$row["ref"],$row["brand"],$row["model"],
+            $row["stock"],$row["description"],$row["dealer"],$row["price"],
+            $row["dealerprice"]);
+        
         $ret[0] = $prod;
         $ret[1] = 1; #Estat de l'operacio, completat
     } else {
@@ -226,10 +268,12 @@ class ProductDb{
 
     mysqli_close($conn);
     return $ret;
-
   }
   
-  // Get the products under 50 unities of stock
+  /**
+   * Get all the Products which stock is under 50 units
+   * @ret Array with Product objects and State of the operation, 1 for done
+   */
   public function getProductsUnderStock(){
     $conn = $this->createConnection();
     
@@ -254,5 +298,4 @@ class ProductDb{
     mysqli_close($conn);
     return $ret;
   }
-  
 }
