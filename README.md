@@ -120,11 +120,14 @@ A common use that you'll see into the code is the inclusion of:
 <?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
 ```
 
-<?php include(__DIR__.'/resources/inc/header.php'); ?> <!--Header-->
-
 and
 
+
+```
+#!php
+
 <?php include(__DIR__.'/resources/inc/footer.php'); ?>
+```
 
 Which helped with a centralized solution, for header links, scripts, and titles.
 In addition with two variables like the $pageTitle and $type. Each one with it's
