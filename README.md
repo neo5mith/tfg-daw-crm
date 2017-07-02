@@ -126,13 +126,20 @@ As a new growing WebApp, constant changes are done, and lot's of improvements
 can be made. Here are some ones I came up with for future implementations.
 
 ·Check that all fields are filled, and also with the right type of of data.
+
 ·Upload Product images, and be able to manipulate them on the go.
+
 ·Control and show all the possible errors (testers needed)
+
 ·Sort the tables by columns
+
 ·Pagination of the tables, in order to prevent long scrolls
+
 ·Search bar for the table information
+
 ·When a phone number is inserted into a Client, based on the city, and country
 fullfill all the prefixes
+
 ·Generate a PDF from the orders
 
 
