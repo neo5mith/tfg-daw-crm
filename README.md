@@ -1,33 +1,33 @@
 #Divisions of this document:#
-1. What is Neosmith CRM?
+What is Neosmith CRM?
 
-* Description
+1. Description
 
-* Functions
+2. Functions
 
- Clients
+* Clients
 
- Products
+* Products
 
- Orders
+* Orders
 
- Dashboard
+* Dashboard
 
-2. How it's made Neosmith CRM?
+How it's made Neosmith CRM?
 
-* IDE
+1. IDE
 
-* Environment
+2. Environment
 
-3. Structure of the code
+Structure of the code
 
-4. Improvements
+Improvements
 
-5. References
+References
 
-6. Contact
+Contact
 
-7. Speciall thanks to
+Speciall thanks to
 
 
 
