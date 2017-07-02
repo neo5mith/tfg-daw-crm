@@ -185,7 +185,7 @@ can be made. Here are some ones I came up with for future implementations.
 ·Search bar for the table information
 
 ·When a phone number is inserted into a Client, based on the city, and country
-fullfill all the prefixes
+fullfill all the prefixes (maybe not fully usefull)
 
 ·Generate a PDF from the orders
 
