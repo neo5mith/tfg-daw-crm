@@ -55,6 +55,7 @@ see the "Reserved" orders, or visualize the earnings by each Client.
 
 ##IDE
 Neosmith CRM project, has been fully developed into the Cloud 9 platform. (https://c9.io/)
+
 This platform has allowed me to generate since the begging a fully operational
 enviroinment thanks to the ease of creating a PreConfigured Workspace with a
 LAMP. From here, I've been adding my other needs into a place with lots of useful
@@ -100,6 +101,7 @@ directory, but this one is a mix of some parts of the others.
 
 Also used into the development, and a very important part for the project 
 structure, and the behavior of the WebApp, has been the implementation of an API.
+
 This API have helped with the code, interconnecting the requests to the server
 with the controllers, and then returning the data to the requested page. All this
 controlled with AJAX, resulted into a page that reloads and manage the content
