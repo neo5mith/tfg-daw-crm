@@ -46,6 +46,7 @@ For example, we will be able, to see, the Products that are under a "low" stock,
 see the "Reserved" orders, or visualize the earnings by each Client.
 
 
+
 #How it's made Neosmith CRM?
 
 
@@ -72,6 +73,7 @@ writting and making a bridge work between MySQL, or others for exemple).
 Apart from that, i've added a javascript library called Jquery. Also and for 
 autocomplete input forms a plugin called easyAutocomplete. And finally a graphics
 plugin, from the hand of Google Developers, called Charts.
+
 
 
 #Structure of the code
@@ -119,6 +121,7 @@ In addition with two variables like the $pageTitle and $type. Each one with it's
 own purpose.
 
 
+
 #Improvements
 
 
@@ -141,6 +144,7 @@ can be made. Here are some ones I came up with for future implementations.
 fullfill all the prefixes
 
 ·Generate a PDF from the orders
+
 
 
 #References
@@ -175,12 +179,14 @@ https://developers.google.com/
 https://developers.google.com/chart/
 
 
+
 #Contact
 
 
 For further information, improvements or whatever concerning to this, send me an email to:
 
 sergibartual@gmail.com
+
 
 
 #Speciall thanks to
